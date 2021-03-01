@@ -1,0 +1,25 @@
+.project-item {
+    width: 50%;
+    height: 50vh;
+
+    .invisible-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.52);
+        transition: all .2s ease-in-out;
+
+        h1 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+
+    &:hover .invisible-content {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
