@@ -2,11 +2,15 @@ import React from "react";
 import "./project.scss";
 import { withRouter } from "react-router-dom";
 
-const Project = ({ title, linkUrl, history, match }) => {
+const Project = ({ title, imageUrl, linkUrl, history, match }) => {
+    const img = imageUrl.PlaceholderImg;
     return (
         <div
             className="project-item"
             onClick={() => history.push(`${match.url}${linkUrl}`)}
+            style={{
+                backgroundImage: `url(${img})`,
+            }}
         >
             <div className="invisible-content">
                 <h1 className="title">{title.toUpperCase()}</h1>

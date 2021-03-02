@@ -1,7 +1,10 @@
 .project-item {
     width: 50%;
     height: 50vh;
-
+    background-size: cover;
+    background-position: center;
+    border: solid 2px white;
+    
     .invisible-content {
         display: flex;
         justify-content: center;
@@ -9,12 +12,15 @@
         height: 100%;
         width: 100%;
         opacity: 0;
-        background: rgba(255, 255, 255, 0.52);
+        background: rgba(255, 255, 255, 0.7);
         transition: all .2s ease-in-out;
 
         h1 {
-            padding-left: 1rem;
-            padding-right: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-weight: 400;
+            text-align: center;
+            color: black;
         }
     }
 
