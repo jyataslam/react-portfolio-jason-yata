@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import HomePage from "./pages/home/homepage";
 import WorkPage from "./pages/work/workpage";
 import AboutPage from "./pages/about/aboutpage";
+import ProjectPage from "./pages/project/project";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/work" component={WorkPage} />
                 <Route path="/about" component={AboutPage} />
+                <Route path="/:projectName" component={ProjectPage} />
             </Switch>
         </div>
     );
