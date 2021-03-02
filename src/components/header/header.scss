@@ -27,7 +27,8 @@
             letter-spacing: .25em;
             text-transform: uppercase;
             line-height: 1em;
-            transition: color .1s;
+            transition: color .2s;
+            font-weight: bold;
         }
 
         :hover {
@@ -35,7 +36,7 @@
         }
 
         :last-child {
-            padding-left: 26px;
+            padding-left: 30px;
         }
     }
 }
