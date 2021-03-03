@@ -10,12 +10,20 @@ const Header = () => {
                 <img src={logo} alt="jason yata logo" />
             </Link>
             <div className="links-container">
-                <Link className="link" to="/work">
+                <Link className="link" to="/">
                     Work
                 </Link>
                 <Link className="link" to="/about">
                     About
                 </Link>
+                <a
+                    href="https://drive.google.com/file/d/18LD3tnZteQNTme5OF5ZELs3Vo8qnEq8_/view"
+                    className="link"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    Resumé
+                </a>
             </div>
         </div>
     );

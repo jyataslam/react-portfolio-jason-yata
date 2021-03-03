@@ -19,14 +19,26 @@ class HomePage extends React.Component {
                 linkUrl: "huntingtondigital",
             },
             {
-                title: "Gutierrez Chiropractic",
+                title: "TravelWell",
                 id: 3,
+                imageUrl: { PlaceholderImg },
+                linkUrl: "travelwell",
+            },
+            {
+                title: "Pocket Statz",
+                id: 4,
+                imageUrl: { PlaceholderImg },
+                linkUrl: "pocketstatz",
+            },
+            {
+                title: "Gutierrez Chiropractic",
+                id: 5,
                 imageUrl: { PlaceholderImg },
                 linkUrl: "gutierrezchiro",
             },
             {
                 title: "Salisbury Plastic Surgery",
-                id: 4,
+                id: 6,
                 imageUrl: { PlaceholderImg },
                 linkUrl: "salisburyps",
             },

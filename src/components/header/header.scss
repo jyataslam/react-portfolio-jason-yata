@@ -35,8 +35,9 @@
             color: #333;
         }
 
-        :last-child {
+        :nth-child(even) {
             padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }

@@ -12,12 +12,8 @@ class ProjectPage extends Component {
             bio,
             deliverables,
             website,
-            imageOne,
-            imageTwo,
-            imageThree,
-            imageFour,
-            imageFive,
-            imageSix,
+            featuredImage,
+            images,
         } = this.state[name];
         console.log(
             "deliverables",
@@ -30,9 +26,17 @@ class ProjectPage extends Component {
                     <h1>{title}</h1>
                     <p className="technical">technical brief</p>
                     <p className="bio">{bio}</p>
-                    <p className="website">{website}</p>
+                    <p className="visit">Visit their website at:</p>
+                    <a
+                        href={`//${website}`}
+                        rel="noreferrer"
+                        target="_blank"
+                        className="website"
+                    >
+                        {website}
+                    </a>
                 </div>
-                <img src={imageOne} alt={title} />
+                <img src={featuredImage} alt={title} />
                 <div className="column-50-text top-bottom-padding center">
                     <p className="technical">skills showcased</p>
                     {deliverables.map((item, index) => (
@@ -41,11 +45,9 @@ class ProjectPage extends Component {
                         </p>
                     ))}
                 </div>
-                <img src={imageTwo} alt={title} />
-                <img src={imageThree} alt={title} />
-                <img src={imageFour} alt={title} />
-                <img src={imageFive} alt={title} />
-                <img src={imageSix} alt={title} />
+                {images.map((item, index) => (
+                    <img src={item.image} key={index} alt={title}></img>
+                ))}
             </section>
         );
     }
