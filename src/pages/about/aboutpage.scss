@@ -1,0 +1,68 @@
+.about {
+    padding: 0 14vw 1.5vw;
+    display: flex;
+
+    .image-container {
+        width: 30%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-container {
+        padding-left: 8vw;
+        width: 70%;
+    }
+
+    .location {
+        margin-top: 0;
+    }
+
+    .location, .title {
+        font-family: 'Work Sans', sans-serif;
+        font-style: normal;
+        line-height: 1.6em;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        color: #333;
+        font-size: 12px;
+    }
+
+    h1 {
+        margin-top: 1.5rem;
+        font-size: 2.60416667vw;
+        font-weight: 400;
+    }
+
+    p {
+        font-family: 'Lora', serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 1.8em;
+        letter-spacing: .02em;
+        text-rendering: optimizeLegibility;
+        color: #333;
+        margin-top: 1.25em;
+        margin-bottom: 1.6em;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        padding-left: 4px;
+        font-weight: 500;
+    }
+
+    i {
+        fill: #222;
+        font-size: 1.4rem;
+
+        &:nth-child(even) {
+            margin-left: .85rem;
+            margin-right: .85rem;
+        }
+    }
+}
