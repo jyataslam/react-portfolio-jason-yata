@@ -1,9 +1,21 @@
+$large: 1024px;
+$med: 768px;
+$small: 554px;
+
 .project-item {
     width: 50%;
     height: 50vh;
     background-size: cover;
     background-position: center;
     border: solid 2px white;
+
+    @media screen and (max-width: $large) {
+        width: 50%;
+    }
+
+    @media screen and (max-width: $med) {
+        width: 100%;
+    }
     
     .invisible-content {
         display: flex;
@@ -21,6 +33,10 @@
             font-weight: 400;
             text-align: center;
             color: #dddee2;
+
+            @media screen and (max-width: $small) {
+                font-size: 1.5em;
+            }
         }
     }
 

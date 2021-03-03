@@ -27,13 +27,16 @@ const AboutPage = () => {
                     to all of my projects.
                 </p>
                 <p>
-                    Technologies I work with professionally are Javascript
-                    (ES6/ES7), React, Redux, Gatsby, GraphQL, PHP, HTML, CSS,
-                    SCSS, Node, Git, AWS, Netlify, Firebase, Wordpress, RESTful
-                    API's, and many differently headless CMS's.
+                    Technologies I work with professionally are{" "}
+                    <span>
+                        Javascript (ES6/ES7), React, Redux, Gatsby, GraphQL,
+                        PHP, HTML, CSS, SCSS, Node, Git, AWS, Netlify, Firebase,
+                        Wordpress, RESTful API's
+                    </span>
+                    , and many differently headless CMS's.
                 </p>
                 <p>
-                    In my free time I co-host a web dev podcast
+                    In my free time I co-host a web development podcast
                     <a
                         href="https://open.spotify.com/show/3CLctEf29mQHmosLDDFSst?si=CaohK_0tR063v5MVqH4pjg"
                         target="_blank"
