@@ -18,10 +18,19 @@ const AboutPage = () => {
                     Web Developer. Software Engineer. Creative Designer.
                 </p>
                 <p className="bio">
-                    I work as a web developer and software engineer creating
-                    websites and applications for companies. I currently work
-                    professionally with Javascript, React, Redux, Gatsby,
-                    GraphQL, and many other technologies.
+                    I am a Front End Web Developer and Software Engineer
+                    currently living in Orange County, California. Since
+                    graduating from the LearningFuze Web Development Bootcamp, I
+                    have been building websites, designing wireframes,
+                    constructing web applications, and leading dev teams for
+                    over 2 years. I bring an open mind and relentless curiosity
+                    to all of my projects.
+                </p>
+                <p>
+                    Technologies I work with professionally are Javascript
+                    (ES6/ES7), React, Redux, Gatsby, GraphQL, PHP, HTML, CSS,
+                    SCSS, Node, Git, AWS, Netlify, Firebase, Wordpress, RESTful
+                    API's, and many differently headless CMS's.
                 </p>
                 <p>
                     In my free time I co-host a web dev podcast
@@ -32,13 +41,34 @@ const AboutPage = () => {
                     >
                         @badforeducation
                     </a>
-                    <br></br>I also love running, traveling, and listening to
-                    audiobooks.
+                    <br></br>I also love running, writing music, and traveling
+                    to new places.
                 </p>
                 <div className="icon-container">
-                    <i className="fa fa-spotify"></i>
-                    <i className="fa fa-linkedin"></i>
-                    <i className="fa fa-instagram"></i>
+                    <a href="https://open.spotify.com/user/jyataslam?si=akEOmdB_Q2KNaPKIVaveBA">
+                        <i className="fa fa-spotify"></i>
+                    </a>
+                    <a
+                        href="https://github.com/jyataslam"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fa fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/jasonyata/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fa fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/jasonyata/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <i className="fa fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </section>
