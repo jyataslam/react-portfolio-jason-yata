@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./header.scss";
 import logo from "../../assets/images/logo.png";
 
@@ -10,20 +10,15 @@ const Header = () => {
                 <img src={logo} alt="jason yata logo" />
             </Link>
             <div className="links-container">
-                <Link className="link" to="/">
+                <NavLink className="link" activeClassName="active" exact to="/">
                     Work
-                </Link>
-                <Link className="link" to="/about">
+                </NavLink>
+                <NavLink className="link" activeClassName="active" to="/about">
                     About
-                </Link>
-                <a
-                    href="https://drive.google.com/file/d/18LD3tnZteQNTme5OF5ZELs3Vo8qnEq8_/view"
-                    className="link"
-                    target="_blank"
-                    rel="noreferrer"
-                >
+                </NavLink>
+                <NavLink className="link" activeClassName="active" to="/resume">
                     Resumé
-                </a>
+                </NavLink>
             </div>
         </div>
     );

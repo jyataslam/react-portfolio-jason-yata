@@ -1,0 +1,27 @@
+.resume {
+    padding: 0 14vw 5vw;
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        font-family: 'Work Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin: 1rem auto 0;
+        background-color: #fefc86;
+        color: black;
+        padding: .9em 1.5em;
+        text-decoration: none;
+        outline: none;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background-color: #171527;
+            color: white;
+        }
+    }
+}

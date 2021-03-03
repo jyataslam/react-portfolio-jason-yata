@@ -5,6 +5,7 @@ import Header from "./components/header/header";
 import HomePage from "./pages/home/homepage";
 import AboutPage from "./pages/about/aboutpage";
 import ProjectPage from "./pages/project/project";
+import ResumePage from "./pages/resume/resumepage";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
+                <Route path="/resume" component={ResumePage} />
                 <Route path="/:projectName" component={ProjectPage} />
             </Switch>
         </div>
