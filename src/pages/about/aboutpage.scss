@@ -1,3 +1,4 @@
+$xlarge: 1920px;
 $large: 1024px;
 $med: 768px;
 $small: 554px;
@@ -15,6 +16,10 @@ $small: 554px;
         padding-left: 3.2vw;
         padding-right: 3.2vw;
         padding-bottom: 3rem;
+    }
+
+    @media screen and (min-width: 1500px) {
+        padding: 0 7vw 1.5vw;
     }
 
     .image-container {
@@ -64,12 +69,15 @@ $small: 554px;
     }
 
     h1 {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         font-size: 2.60416667vw;
         font-weight: 400;
+        margin-bottom: 1.8rem;
 
         @media screen and (max-width: $med) {
             font-size: 30px;
+            margin-top: 1.3rem;
+            margin-bottom: 1.3rem;
         }
     }
 
@@ -96,9 +104,15 @@ $small: 554px;
     i {
         fill: #222;
         font-size: 1.4rem;
+        transition: all .2s ease-in-out;
     }
 
     .icon-container {
+        display: inline-block;
+
+        &:hover a {
+            color: #c7c7c7;
+        }
         a {
             padding-left: 0;
 
@@ -109,6 +123,10 @@ $small: 554px;
 
             &:last-child {
                 margin-right: 0;
+            }
+
+            &:hover {
+                color: #333;
             }
         }
 

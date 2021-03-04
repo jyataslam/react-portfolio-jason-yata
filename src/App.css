@@ -7,3 +7,8 @@ body {
   color: #333;
   letter-spacing: 0.03em;
 }
+
+.site-width {
+  max-width: 1500px;
+  margin: auto;
+}

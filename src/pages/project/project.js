@@ -21,7 +21,7 @@ class ProjectPage extends Component {
         );
 
         return (
-            <section className="project">
+            <section className="project site-width">
                 <div className="column-50-text">
                     <h1>{title}</h1>
                     <p className="technical">technical brief</p>

@@ -35,6 +35,13 @@ class Header extends React.Component {
                     <NavLink
                         className="link"
                         activeClassName="active"
+                        to="/podcast"
+                    >
+                        Podcast
+                    </NavLink>
+                    <NavLink
+                        className="link"
+                        activeClassName="active"
                         to="/about"
                     >
                         About
@@ -70,6 +77,15 @@ class Header extends React.Component {
                         onClick={this.sidebarClose}
                     >
                         Work
+                    </NavLink>
+                    <NavLink
+                        className="link"
+                        activeClassName="active"
+                        exact
+                        to="/podcast"
+                        onClick={this.sidebarClose}
+                    >
+                        Podcast
                     </NavLink>
                     <NavLink
                         className="link"

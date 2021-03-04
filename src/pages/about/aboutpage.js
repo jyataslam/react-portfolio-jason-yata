@@ -4,7 +4,7 @@ import "./aboutpage.scss";
 
 const AboutPage = () => {
     return (
-        <section className="about">
+        <section className="about site-width">
             <div className="image-container">
                 <img
                     src={headshot}
@@ -38,7 +38,7 @@ const AboutPage = () => {
                 <p>
                     In my free time I co-host a web development podcast
                     <a
-                        href="https://open.spotify.com/show/3CLctEf29mQHmosLDDFSst?si=CaohK_0tR063v5MVqH4pjg"
+                        href="https://www.instagram.com/badforeducationpodcast"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -48,7 +48,7 @@ const AboutPage = () => {
                     to new places.
                 </p>
                 <div className="icon-container">
-                    <a href="https://open.spotify.com/user/jyataslam?si=akEOmdB_Q2KNaPKIVaveBA">
+                    <a href="https://open.spotify.com/show/3CLctEf29mQHmosLDDFSst?si=CaohK_0tR063v5MVqH4pjg">
                         <i className="fa fa-spotify"></i>
                     </a>
                     <a

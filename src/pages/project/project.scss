@@ -1,3 +1,4 @@
+$xlarge: 1920px;
 $large: 1024px;
 $med: 768px;
 $small: 554px;
@@ -43,6 +44,10 @@ $small: 554px;
 
         @media screen and (max-width: $small) {
             margin-bottom: 1.7rem;
+        }
+
+        @media screen and (min-width: $xlarge) {
+            font-size: 50px;
         }
     }
 

@@ -6,6 +6,7 @@ import HomePage from "./pages/home/homepage";
 import AboutPage from "./pages/about/aboutpage";
 import ProjectPage from "./pages/project/project";
 import ResumePage from "./pages/resume/resumepage";
+import PodcastPage from "./pages/podcast/podcastpage";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
                 <Route path="/resume" component={ResumePage} />
+                <Route path="/podcast" component={PodcastPage} />
                 <Route path="/:projectName" component={ProjectPage} />
             </Switch>
         </div>
