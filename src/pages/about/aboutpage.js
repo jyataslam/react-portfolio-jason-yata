@@ -2,30 +2,24 @@ import React from "react";
 import headshot from "../../assets/images/headshot.jpg";
 import "./aboutpage.scss";
 // import LoadingScreen from "../../components/loader/loader";
+import ImageContainer from "../../components/image-container/image-container";
 
 class AboutPage extends React.Component {
     state = {
         isLoaded: false,
     };
 
-    componentDidMount() {
-        this.setState({ isLoaded: true });
-    }
-
-    handleImgLoad = () => {
-        console.log("image loaded");
-        this.setState({ isLoaded: true });
-    };
-
     render() {
         return (
             <section className="about site-width">
                 <div className="image-container">
-                    <img
-                        src={headshot}
-                        onLoad={this.handleImgLoad}
-                        alt="jason yata web development and design headshot"
-                    />
+                    <div key="1" className="wrapper">
+                        <ImageContainer
+                            src={headshot}
+                            thumb={headshot}
+                            alt="jason yata headshot"
+                        />
+                    </div>
                 </div>
                 <div className="about-container">
                     <p className="location">orange county | california</p>
