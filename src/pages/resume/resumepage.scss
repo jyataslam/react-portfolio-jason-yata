@@ -1,27 +1,56 @@
+$large: 1024px;
+$med: 768px;
+$small: 554px;
+
 .resume {
     padding: 0 14vw 5vw;
     display: flex;
     flex-direction: column;
 
-    img {
+    @media screen and (max-width: $small) {
+        padding: 0 3.1vw 4rem;
+    }
+
+    .full-img, .mobile-img {
         width: 100%;
+    }
+
+    .mobile-img {
+        display: none;
+
+        @media screen and (max-width: $small) {
+            display: block;
+        }
+    }
+
+    .full-img {
+        @media screen and (max-width: $small) {
+            display: none;
+        }
     }
 
     a {
         font-family: 'Work Sans', sans-serif;
         font-size: 1.5rem;
         font-weight: 300;
-        margin: 1rem auto 0;
-        background-color: #fefc86;
-        color: black;
+        margin: 1.5rem auto 0;
+        background-color: white;
+        color: #333;
+        border: 2px solid #333;
         padding: .9em 1.5em;
         text-decoration: none;
         outline: none;
         transition: all .2s ease-in-out;
 
         &:hover {
-            background-color: #171527;
-            color: white;
+            background-color: #fefc86;
+            color: black;
+            border-radius: 50px;
+            border: 2px solid #fefc86;
+        }
+
+        @media screen and (max-width: $small) {
+            font-size: 1rem;
         }
     }
 }
