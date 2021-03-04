@@ -1,7 +1,7 @@
 import React from "react";
 import headshot from "../../assets/images/headshot.jpg";
 import "./aboutpage.scss";
-import LoadingScreen from "../../components/loader/loader";
+// import LoadingScreen from "../../components/loader/loader";
 
 class AboutPage extends React.Component {
     state = {
