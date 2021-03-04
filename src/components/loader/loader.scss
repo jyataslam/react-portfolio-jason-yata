@@ -1,0 +1,17 @@
+$xlarge: 1920px;
+$large: 1024px;
+$med: 768px;
+$small: 554px;
+
+.loader {
+    height: 64vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    img {
+        width: 8rem;
+    }
+}
