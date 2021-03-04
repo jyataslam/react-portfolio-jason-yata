@@ -10,7 +10,9 @@ class PodcastPage extends React.Component {
 
     componentDidMount() {
         this.createBuzzsproutPlayer();
-        this.setState({ isLoaded: true });
+        setTimeout(() => {
+            this.setState({ isLoaded: true });
+        }, 300);
     }
 
     createBuzzsproutPlayer() {

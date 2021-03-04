@@ -10,7 +10,9 @@ class ResumePage extends React.Component {
     };
 
     componentDidMount() {
-        this.setState({ isLoaded: true });
+        setTimeout(() => {
+            this.setState({ isLoaded: true });
+        }, 300);
     }
 
     render() {
