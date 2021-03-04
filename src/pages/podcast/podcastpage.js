@@ -1,8 +1,6 @@
 import React from "react";
 import "./podcastpage.scss";
 import logo from "../../assets/images/logo-bfe.png";
-import duoPhoto from "../../assets/images/bfe-duo-square.jpg";
-import podcastCard from "../../assets/images/podcast-cover.jpg";
 
 class PodcastPage extends React.Component {
     componentDidMount() {
