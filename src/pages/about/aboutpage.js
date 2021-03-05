@@ -1,36 +1,41 @@
 import React from "react";
 import headshot from "../../assets/images/headshot.jpg";
 import "./aboutpage.scss";
-import LoadingScreen from "../../components/loader/loader";
+import LoadingPage from "../../components/loader/loader";
 
 class AboutPage extends React.Component {
     state = {
         isLoaded: false,
+        src: null,
     };
 
     componentDidMount() {
-        this.handleImgLoad();
+        this.fetchImage();
+        this.setState({ isLoaded: true });
     }
 
-    handleImgLoad = () => {
-        console.log("image loaded");
-        this.setState({ isLoaded: true });
+    fetchImage = () => {
+        const src = { headshot };
+        console.log(src.headshot);
+        fetch(src.headshot).then(() => this.setState({ src: src.headshot }));
+    };
+
+    createImageElement = (source) => {
+        const image = document.createElement("img");
+        image.src = source;
+        console.log("img", image);
     };
 
     render() {
-        const { isLoaded } = this.state;
+        const { isLoaded, src } = this.state;
 
         if (!isLoaded) {
-            return <LoadingScreen />;
+            return <LoadingPage />;
         } else {
             return (
                 <section className="about site-width">
                     <div className="image-container">
-                        <img
-                            src={headshot}
-                            onLoad={this.handleImgLoad}
-                            alt="jason yata"
-                        />
+                        <img src={`${isLoaded ? src : ""}`} alt="jason yata" />
                     </div>
                     <div className="about-container">
                         <p className="location">orange county | california</p>
