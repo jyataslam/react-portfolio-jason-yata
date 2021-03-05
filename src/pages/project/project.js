@@ -15,10 +15,6 @@ class ProjectPage extends Component {
             featuredImage,
             images,
         } = this.state[name];
-        console.log(
-            "deliverables",
-            deliverables.map((item, index) => console.log(item.title))
-        );
 
         return (
             <section className="project site-width">

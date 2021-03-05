@@ -2,7 +2,6 @@ import React from "react";
 import "./homepage.scss";
 import ProjectItem from "../../components/project-item/project";
 import PlaceholderImg from "../../assets/images/project-placeholder.jpg";
-import LoadingScreen from "../../components/loader/loader";
 
 class HomePage extends React.Component {
     state = {
@@ -47,24 +46,14 @@ class HomePage extends React.Component {
         ],
     };
 
-    componentDidMount() {
-        this.setState({ isLoaded: true });
-    }
-
     render() {
-        const { isLoaded } = this.state;
-
-        if (!isLoaded) {
-            return <LoadingScreen />;
-        } else {
-            return (
-                <div className="home">
-                    {this.state.projects.map(({ id, ...otherProps }) => (
-                        <ProjectItem key={id} {...otherProps} />
-                    ))}
-                </div>
-            );
-        }
+        return (
+            <div className="home">
+                {this.state.projects.map(({ id, ...otherProps }) => (
+                    <ProjectItem key={id} {...otherProps} />
+                ))}
+            </div>
+        );
     }
 }
 
