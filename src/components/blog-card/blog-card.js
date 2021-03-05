@@ -12,13 +12,12 @@ const BlogCard = ({
     match,
 }) => {
     const MAX_LENGTH = 300;
-    const featuredImage = featuredImg.img;
     return (
         <div className="blog-card">
             <div
                 className="image-container"
                 onClick={() => history.push(`${match.url}${slug}`)}
-                style={{ backgroundImage: `url(${featuredImage})` }}
+                style={{ backgroundImage: `url(${featuredImg})` }}
             ></div>
             <div className="text-container">
                 <h1

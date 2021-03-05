@@ -8,6 +8,7 @@ export default class BlogPageSingle extends React.Component {
     };
 
     render() {
+        console.log(this.state.data);
         const currentSlug = this.props.match.params.blogName;
         return (
             <div className="blog-single">
