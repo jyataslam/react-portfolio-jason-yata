@@ -1,0 +1,45 @@
+.blog-card {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    .image-container {
+        width: 40%;
+        height: 35vh;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .text-container {
+        width: 60%;
+        padding: 1rem 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        h1 {
+            margin-bottom: 1rem;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+
+        .button {
+            margin-top: 0;
+            margin-bottom: 0;
+            border: 1px solid #333;
+            padding: .3rem 1.3rem;
+            transition: all .1s ease-in-out;
+            align-self: flex-start;
+
+            &:hover {
+                cursor: pointer;
+                background: #333;
+                color: white;
+            }
+        }
+    }
+}
