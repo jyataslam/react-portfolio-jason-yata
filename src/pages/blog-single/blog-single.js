@@ -1,5 +1,6 @@
 import React from "react";
 import BLOG_DATA from "../../assets/data/blogs.data";
+import BlogSingleInfo from "../../components/blog-single-info/blog-single-info";
 
 export default class BlogPageSingle extends React.Component {
     state = {
@@ -11,9 +12,11 @@ export default class BlogPageSingle extends React.Component {
         return (
             <div className="blog-single">
                 {this.state.data.map((item, index) => {
-                    return `/blog${item.slug}` === `/blog/${currentSlug}`
-                        ? console.log("match")
-                        : console.log("nah not this time buddy");
+                    return `/blog${item.slug}` === `/blog/${currentSlug}` ? (
+                        <BlogSingleInfo info={item} key={index} />
+                    ) : (
+                        console.log("nah not this time buddy")
+                    );
                 })}
             </div>
         );

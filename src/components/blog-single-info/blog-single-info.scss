@@ -1,0 +1,23 @@
+$xlarge: 1920px;
+$large: 1024px;
+$med: 768px;
+$small: 554px;
+
+.blog-single-info {
+    padding: 0 1.5vw 1.5vw;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $small) {
+        padding: 2rem 3.2vw 3rem;
+    }
+
+    .hero {
+        height: 70vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
