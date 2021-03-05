@@ -9,11 +9,19 @@ class Header extends React.Component {
     };
 
     sidebarClose = () => {
-        this.setState({ isSidenavOpen: false });
+        this.setState({ isSidenavOpen: false }, () => {
+            this.state.isSidenavOpen
+                ? (document.body.style.overflow = "hidden")
+                : (document.body.style.overflow = "initial");
+        });
     };
 
     sidebarOpen = () => {
-        this.setState({ isSidenavOpen: true });
+        this.setState({ isSidenavOpen: true }, () => {
+            this.state.isSidenavOpen
+                ? (document.body.style.overflow = "hidden")
+                : (document.body.style.overflow = "initial");
+        });
     };
 
     render() {

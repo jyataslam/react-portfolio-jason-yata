@@ -1,13 +1,39 @@
+$xlarge: 1920px;
+$large: 1024px;
+$med: 768px;
+$small: 554px;
+
 .blog-card {
     display: flex;
     margin-bottom: 1.5rem;
 
+    @media screen and (max-width: $small) {
+        flex-direction: column;
+        margin-bottom: 2.5rem;
+    }
+
     .image-container {
         width: 40%;
         height: 35vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
         &:hover {
             cursor: pointer;
+        }
+
+        @media screen and (max-width: $large) {
+            height: 28vh;
+        }
+
+        @media screen and (max-width: $med) {
+            height: 40vh;
+        }
+
+        @media screen and (max-width: $small) {
+            width: 100%;
+            height: 34vh;
         }
     }
 
@@ -18,12 +44,33 @@
         flex-direction: column;
         justify-content: flex-end;
 
+        @media screen and (max-width: $small) {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
         h1 {
             margin-bottom: 1rem;
 
             &:hover {
                 text-decoration: underline;
                 cursor: pointer;
+            }
+
+            @media screen and (max-width: $small) {
+                margin-bottom: 0;
+            }
+        }
+
+        .title {
+            align-self: flex-start;
+
+            @media screen and (min-width: $xlarge) {
+                font-size: 40px;
+            }
+
+            @media screen and (max-width: $med) {
+                font-size: 1.7rem;
             }
         }
 

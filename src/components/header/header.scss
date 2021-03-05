@@ -87,6 +87,7 @@ $small: 554px;
         flex-direction: column;
         z-index: -1;
         transition: all .05s ease-in;
+        -webkit-overflow-scrolling: touch;
 
         .link {
             font-family: 'Work Sans', sans-serif;

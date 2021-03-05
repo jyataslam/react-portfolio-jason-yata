@@ -21,7 +21,10 @@ const BlogCard = ({
                 style={{ backgroundImage: `url(${featuredImage})` }}
             ></div>
             <div className="text-container">
-                <h1 onClick={() => history.push(`${match.url}${slug}`)}>
+                <h1
+                    onClick={() => history.push(`${match.url}${slug}`)}
+                    className="title"
+                >
                     {title}
                 </h1>
                 <h3>{date}</h3>
