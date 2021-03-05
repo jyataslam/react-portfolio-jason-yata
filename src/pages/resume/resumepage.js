@@ -10,10 +10,12 @@ class ResumePage extends React.Component {
     };
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({ isLoaded: true });
-        }, 300);
+        this.handleLoad();
     }
+
+    handleLoad = () => {
+        this.setState({ isLoaded: true });
+    };
 
     render() {
         const { isLoaded } = this.state;
@@ -27,11 +29,13 @@ class ResumePage extends React.Component {
                         src={resume}
                         alt="jason yata's resume"
                         className="full-img"
+                        onLoad={this.handleLoad}
                     />
                     <img
                         src={mobileResume}
                         alt="jason yata's resume"
                         className="mobile-img"
+                        onLoad={this.handleLoad}
                     />
                     <a
                         href="https://drive.google.com/file/d/18LD3tnZteQNTme5OF5ZELs3Vo8qnEq8_/view"

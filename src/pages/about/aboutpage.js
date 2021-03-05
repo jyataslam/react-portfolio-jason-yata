@@ -6,28 +6,14 @@ import LoadingPage from "../../components/loader/loader";
 class AboutPage extends React.Component {
     state = {
         isLoaded: false,
-        src: null,
     };
 
     componentDidMount() {
-        this.fetchImage();
         this.setState({ isLoaded: true });
     }
 
-    fetchImage = () => {
-        const src = { headshot };
-        console.log(src.headshot);
-        fetch(src.headshot).then(() => this.setState({ src: src.headshot }));
-    };
-
-    createImageElement = (source) => {
-        const image = document.createElement("img");
-        image.src = source;
-        console.log("img", image);
-    };
-
     render() {
-        const { isLoaded, src } = this.state;
+        const { isLoaded } = this.state;
 
         if (!isLoaded) {
             return <LoadingPage />;
@@ -35,7 +21,7 @@ class AboutPage extends React.Component {
             return (
                 <section className="about site-width">
                     <div className="image-container">
-                        <img src={`${isLoaded ? src : ""}`} alt="jason yata" />
+                        <img src={headshot} alt="jason yata" />
                     </div>
                     <div className="about-container">
                         <p className="location">orange county | california</p>

@@ -48,9 +48,7 @@ class HomePage extends React.Component {
     };
 
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({ isLoaded: true });
-        }, 300);
+        this.setState({ isLoaded: true });
     }
 
     render() {
