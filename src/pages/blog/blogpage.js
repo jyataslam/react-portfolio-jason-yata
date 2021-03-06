@@ -11,7 +11,10 @@ export default class BlogPage extends React.Component {
     render() {
         return (
             <section id="blog" className="blog site-width">
-                <div className="text-container column-50-text">
+                <div
+                    className="text-container column-50-text"
+                    style={{ paddingTop: "0" }}
+                >
                     <h1>Blog</h1>
                     <h3>Latest Posts</h3>
                 </div>

@@ -8,7 +8,6 @@ export default class BlogPageSingle extends React.Component {
     };
 
     render() {
-        console.log(this.state.data);
         const currentSlug = this.props.match.params.blogName;
         return (
             <div className="blog-single">
@@ -16,7 +15,7 @@ export default class BlogPageSingle extends React.Component {
                     return `/blog${item.slug}` === `/blog/${currentSlug}` ? (
                         <BlogSingleInfo info={item} key={index} />
                     ) : (
-                        console.log("nah not this time buddy")
+                        ""
                     );
                 })}
             </div>

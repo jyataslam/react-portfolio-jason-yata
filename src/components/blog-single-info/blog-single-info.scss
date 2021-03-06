@@ -85,6 +85,11 @@ $small: 554px;
                         line-height: 4rem;
                         margin-bottom: 0;
                         letter-spacing: 0;
+
+                        @media screen and (max-width: $med) and (max-height: $small) {
+                            font-size: 2rem;
+                            line-height: 2rem;
+                        }
                 
                         @media screen and (max-width: $small) {
                             font-size: 2rem;
@@ -101,6 +106,30 @@ $small: 554px;
                         color: #333;
                         font-size: .65rem;
                         font-weight: 400;
+                        margin-bottom: 0;
+                    }
+
+                    .icons-container {
+                        position: relative;
+                        top: 1rem;
+                        right: 12px;
+
+                        .icon {
+                            padding: 0 5px !important;
+                            outline: none !important;
+
+                            &:first-child {
+                                padding-left: 0 !important;
+                            }
+
+                            &:last-child {
+                                padding-right: 0 !important;
+                            }
+
+                            @media screen and (max-width: $small) {
+                                padding: 0 !important;
+                            }
+                        }
                     }
                 }
             }
@@ -108,6 +137,7 @@ $small: 554px;
 
         .hero-header-container {
             margin: 0 auto;
+            padding-bottom: 3vw;
             align-self: flex-end;
             z-index: 1;
             width: 60vw;
