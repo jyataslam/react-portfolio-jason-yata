@@ -16,11 +16,15 @@ const BlogSingleInfo = ({ info }) => {
                 <div className="hero-img-container">
                     <img src={featuredImg} alt={title} />
                 </div>
-                <div className="hero-header-container">
-                    <div className="hero-header-container-inner">
-                        <h1>{title}</h1>
-                        <h3>{date}</h3>
+                <div className="overlay">
+                    <div className="overlay-inner">
+                        <div className="hero-header-container-inner">
+                            <h1>{title}</h1>
+                            <h3>{date}</h3>
+                        </div>
                     </div>
+                </div>
+                <div className="hero-header-container">
                     {content[0] !== undefined ? <p>{content[0].text}</p> : ""}
                     {images[0] !== undefined ? (
                         <img

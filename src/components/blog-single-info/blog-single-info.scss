@@ -1,4 +1,5 @@
 $xlarge: 1920px;
+$large-special: 1348px;
 $large: 1024px;
 $med: 768px;
 $small: 554px;
@@ -18,7 +19,7 @@ $small: 554px;
         top: 0;
         left: 0;
         width: 100%;
-        z-index: -1;
+        z-index: -2;
         background: white;
 
         &:after {
@@ -46,18 +47,76 @@ $small: 554px;
             }
         }
 
-        .hero-header-container {
-            position: relative;
-            bottom: 12rem;
-            z-index: 1;
-            width: 60%;
-            margin: auto;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70vh;
+            width: 100%;
 
-            // position: absolute;
-            // z-index: 1;
-            // width: 60%;
-            // margin: auto;
-            // transform: translate(33%, -27%);
+            .overlay-inner {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                
+                .hero-header-container-inner {
+                    margin: 0 auto;
+                    align-self: flex-end;
+                    z-index: 1;
+                    width: 60vw;
+                    padding-right: 19vw;
+                    padding-bottom: 30px;
+                    max-width: 1500px;
+
+
+                    @media screen and (max-width: $large-special) {
+                        padding-right: 0;
+                    }
+
+                    @media screen and (max-width: $large) {
+                        width: 100%;
+                        padding: 0 3.2vw;
+                    }
+
+                    h1 {
+                        font-family: 'Cinzel', serif;
+                        margin-top: 0;
+                        font-size: 4rem;
+                        line-height: 4rem;
+                        margin-bottom: 0;
+                        letter-spacing: 0;
+                
+                        @media screen and (max-width: $small) {
+                            font-size: 2rem;
+                            line-height: 2rem;
+                        }
+                    }
+    
+                    h3 {
+                        font-family: 'Work Sans', sans-serif;
+                        font-style: normal;
+                        line-height: 1.6em;
+                        letter-spacing: .25em;
+                        text-transform: uppercase;
+                        color: #333;
+                        font-size: .65rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .hero-header-container {
+            margin: 0 auto;
+            align-self: flex-end;
+            z-index: 1;
+            width: 60vw;
+            max-width: 1500px;
+
+            @media screen and (max-width: $large) {
+                width: 100%;
+                padding: 0 3.2vw 1.5vw;
+            }
 
             .hero-header-container-inner {
                 width: 80%;
@@ -69,14 +128,6 @@ $small: 554px;
                     line-height: 4rem;
                     margin-bottom: 0;
                     letter-spacing: 0;
-            
-                    @media screen and (max-width: $small) {
-                        
-                    }
-            
-                    @media screen and (min-width: $xlarge) {
-                        
-                    }
                 }
 
                 h3 {
@@ -102,6 +153,10 @@ $small: 554px;
                 color: #333;
                 margin-top: 3em;
                 margin-bottom: 3em;
+
+                &:first-child {
+                    margin-top: 2em;
+                }
             }
 
             .image {
