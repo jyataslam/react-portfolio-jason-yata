@@ -9,6 +9,10 @@ $small: 554px;
     background-position: center;
     border: solid 2px white;
 
+    @media screen and (min-width: 1500px) {
+        height: 65vh;
+    }
+
     @media screen and (max-width: $large) {
         width: 50%;
     }
