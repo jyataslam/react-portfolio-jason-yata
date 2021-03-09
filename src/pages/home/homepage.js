@@ -1,11 +1,12 @@
 import React from "react";
 import "./homepage.scss";
 import ProjectItem from "../../components/project-item/project";
-import PlaceholderImg from "../../assets/images/project-placeholder.jpg";
 import Ocps from "../../assets/images/ocps/ocps-featured.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
-import Salisbury from "../../assets/images/salisbury/salisbury.jpg";
-import Hd from "../../assets/images/hd/hd.jpg";
+import Salisbury from "../../assets/images/salisbury/salisbury-mockup-template.jpg";
+import Hd from "../../assets/images/hd/huntingtondigital-featured.jpg";
+import Travelwell from "../../assets/images/travelwell/travelwell-featured.jpg";
+import Chiro from "../../assets/images/chiro/chiro-featured-mockup-beige.jpg";
 
 class HomePage extends React.Component {
     state = {
@@ -17,7 +18,6 @@ class HomePage extends React.Component {
                 imageUrl: Ocps,
                 linkUrl: "ocps",
             },
-
             {
                 title: "Huntington Digital",
                 id: 2,
@@ -30,7 +30,6 @@ class HomePage extends React.Component {
                 imageUrl: Salisbury,
                 linkUrl: "salisburyps",
             },
-
             {
                 title: "Pocket Statz",
                 id: 4,
@@ -38,16 +37,16 @@ class HomePage extends React.Component {
                 linkUrl: "pocketstatz",
             },
             {
-                title: "TravelWell",
-                id: 3,
-                imageUrl: PlaceholderImg,
-                linkUrl: "travelwell",
-            },
-            {
                 title: "Gutierrez Chiropractic",
                 id: 5,
-                imageUrl: PlaceholderImg,
+                imageUrl: Chiro,
                 linkUrl: "gutierrezchiro",
+            },
+            {
+                title: "TravelWell",
+                id: 3,
+                imageUrl: Travelwell,
+                linkUrl: "travelwell",
             },
         ],
     };
