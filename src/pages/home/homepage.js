@@ -1,7 +1,7 @@
 import React from "react";
 import "./homepage.scss";
 import ProjectItem from "../../components/project-item/project";
-import Ocps from "../../assets/images/ocps/ocps-featured.jpg";
+import Ocps from "../../assets/images/ocps/ocps-mockup-template-3.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
 import Salisbury from "../../assets/images/salisbury/salisbury-mockup-template.jpg";
 import Hd from "../../assets/images/hd/huntingtondigital-featured.jpg";
