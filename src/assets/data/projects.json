@@ -19,7 +19,7 @@
                 "title": "RESTful APIs"
             },
             {
-                "title": "CMS Integration: Contentful"
+                "title": "CMS Integration: Contentful API"
             },
             {
                 "title": "Amazon Web Services (AWS)"
@@ -109,7 +109,7 @@
                 "title": "PHP"
             },
             {
-                "title": "Axios"
+                "title": "react-router-dom"
             },
             {
                 "title": "User Authentication"
@@ -130,28 +130,28 @@
         "title": "Salisbury Plastic Surgery",
         "routeName": "salisburyps",
         "website": "salisburyps.com",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "Dr. Deborah Ekstrom wanted to boost her online physique with a new website and brand logo. She enjoyed what we had done with orangecountyplasticsurgery.com and requested we use the same template. I was responsible for adding all images and written content to every page, changing the primary and secondary colors to be cohesive with her new logo, and set up her database in Contentful to fetch patients' photos and blogs. She is extremely happy with her results and her practice's SEO has grown enormously. The tech used included Javascript (ES6), HTML5, CSS3, jQuery, PHPmailer, Contentful, and OwlCarousel.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "Javascript"
             },
             {
-                "title": "Web Development"
+                "title": "jQuery"
             },
             {
-                "title": "Web Development"
+                "title": "HTML5/CSS3"
             },
             {
-                "title": "Web Development"
+                "title": "Contentful API"
             },
             {
-                "title": "Web Development"
+                "title": "PHPMailer"
             },
             {
-                "title": "Web Development"
+                "title": "OwlCarousel"
             },
             {
-                "title": "Web Development"
+                "title": "Logo Branding"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/09/7f/7NBotBHs_o.jpg",
@@ -175,28 +175,25 @@
         "title": "Gutierrez Chiropractic",
         "routeName": "gutierrezchiro",
         "website": "chirogutierrez.com",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "Mark and Eunice wanted a faster, more modern looking website to go along with their new practice, as well as a new logo. My responsibilies included coding the landing page, procedure pages, and navigation from an existing wireframe along with creating load and scroll animations. The tech used were Javascript, HTML5, CSS3, PHP, and Adobe XD.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "Javascript"
             },
             {
-                "title": "Web Development"
+                "title": "HTML5/CSS3"
             },
             {
-                "title": "Web Development"
+                "title": "PHP"
             },
             {
-                "title": "Web Development"
+                "title": "Adobe XD"
             },
             {
-                "title": "Web Development"
+                "title": "SEO Enhancement"
             },
             {
-                "title": "Web Development"
-            },
-            {
-                "title": "Web Development"
+                "title": "Logo Rebranding"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/7c/2d/kYnzW0N7_o.jpg",
@@ -217,28 +214,22 @@
         "title": "TravelWell",
         "routeName": "travelwell",
         "website": "travelwell-gatsby.netlify.app",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "Live free, travel well. I wanted to better learn Gatsby so I decided to make a mock travel website. I created all pages and made sure every component was as reusable as possible. Dynamic routing and page creation is handled to render different tour pages and blog posts, and all image loading is performed with GraphQL querying. Contentful is the headless CMS used to hold all tour and blog data, and CSS is handled by Styled Components. The tech used includes Gatsby, GraphQL, Styled Components, and Contentful API. This was a fun project and really helped my working knowledge of Gatsby and React.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "Gatsby"
             },
             {
-                "title": "Web Development"
+                "title": "GraphQL"
             },
             {
-                "title": "Web Development"
+                "title": "Styled Components"
             },
             {
-                "title": "Web Development"
+                "title": "Contentful API"
             },
             {
-                "title": "Web Development"
-            },
-            {
-                "title": "Web Development"
-            },
-            {
-                "title": "Web Development"
+                "title": "gatsby-link"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/ce/ef/dEsWvDVC_o.jpg",
