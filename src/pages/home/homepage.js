@@ -5,7 +5,7 @@ import Ocps from "../../assets/images/ocps/ocps-mockup-template-3.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
 import Salisbury from "../../assets/images/salisbury/salisbury-mockup-template.jpg";
 import Hd from "../../assets/images/hd/huntingtondigital-featured.jpg";
-import Travelwell from "../../assets/images/travelwell/travelwell-featured.jpg";
+import Travelwell from "../../assets/images/travelwell/travel-featured-single.jpg";
 import Chiro from "../../assets/images/chiro/chiro-featured-mockup-beige.jpg";
 
 class HomePage extends React.Component {

@@ -26,6 +26,10 @@ $small: 554px;
         padding: 1px 11.5vw;
         width: 100%;
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @media screen and (max-width: $med) {
             padding: 1px 1.5vw;
         }
