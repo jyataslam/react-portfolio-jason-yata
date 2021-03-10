@@ -10,6 +10,7 @@ import {
     TwitterIcon,
     RedditIcon,
 } from "react-share";
+import { Helmet } from "react-helmet";
 
 const BlogSingleInfo = ({ info }) => {
     const { content, date, featuredImg, images, title } = info;
@@ -18,6 +19,21 @@ const BlogSingleInfo = ({ info }) => {
 
     return (
         <section className="blog-single-info">
+            <Helmet>
+                <title>{title}</title>
+                <meta
+                    name="description"
+                    content="It's blog time, let's read!"
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={currentUrl} />
+                <meta property="og:title" content={title} />
+                <meta
+                    property="og:description"
+                    content="It's blog time, let's read!"
+                />
+                <meta property="og:image" content={featuredImg} />
+            </Helmet>
             <div className="hero">
                 <div className="hero-img-container">
                     <img src={featuredImg} alt={title} />

@@ -1,6 +1,7 @@
 import React from "react";
 import "./podcastpage.scss";
 import logo from "../../assets/images/logo-bfe.png";
+import { Helmet } from "react-helmet";
 
 class PodcastPage extends React.Component {
     componentDidMount() {
@@ -19,6 +20,27 @@ class PodcastPage extends React.Component {
     render() {
         return (
             <section className="podcast site-width">
+                <Helmet>
+                    <title>Podcast | Jason Yata</title>
+                    <meta
+                        name="description"
+                        content="Listen to the Bad For Education Podcast by Jason Yata & Andrew Ly"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta
+                        property="og:url"
+                        content="https://jasonyataportfolio.netlify.app/blog"
+                    />
+                    <meta property="og:title" content="Podcast | Jason Yata" />
+                    <meta
+                        property="og:description"
+                        content="Listen to the Bad For Education Podcast by Jason Yata & Andrew Ly"
+                    />
+                    <meta
+                        property="og:image"
+                        content="https://jasonyataportfolio.netlify.app/static/media/logo-bfe.eb2c742c.png"
+                    />
+                </Helmet>
                 <img
                     src={logo}
                     alt="bad for education podcast logo"

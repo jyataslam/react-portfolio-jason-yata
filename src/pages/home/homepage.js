@@ -1,5 +1,6 @@
 import React from "react";
 import "./homepage.scss";
+import { Helmet } from "react-helmet";
 import ProjectItem from "../../components/project-item/project";
 import Ocps from "../../assets/images/ocps/ocps-mockup-template-3.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
@@ -54,6 +55,30 @@ class HomePage extends React.Component {
     render() {
         return (
             <div className="home">
+                <Helmet>
+                    <title>Jason Yata | Portfolio</title>
+                    <meta
+                        name="description"
+                        content="Portfolio Website for Jason Yata, Development & Design"
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta
+                        property="og:url"
+                        content="https://jasonyataportfolio.netlify.app"
+                    />
+                    <meta
+                        property="og:title"
+                        content="Jason Yata | Portfolio"
+                    />
+                    <meta
+                        property="og:description"
+                        content="Portfolio Website for Jason Yata, Development & Design"
+                    />
+                    <meta
+                        property="og:image"
+                        content="https://jasonyataportfolio.netlify.app/static/media/headshot.3ca03807.jpg"
+                    />
+                </Helmet>
                 {this.state.projects.map(({ id, ...otherProps }) => (
                     <ProjectItem key={id} {...otherProps} />
                 ))}

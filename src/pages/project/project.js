@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./project.scss";
 import PROJECT_JSON from "../../assets/data/projects.json";
 import { SRLWrapper } from "simple-react-lightbox";
+import { Helmet } from "react-helmet";
 
 class ProjectPage extends Component {
     state = PROJECT_JSON;
@@ -31,9 +32,29 @@ class ProjectPage extends Component {
             images,
         } = this.state[name];
 
+        console.log(window.location.href);
+
         return (
             <SRLWrapper options={options}>
                 <section className="project">
+                    <Helmet>
+                        <title>{title}</title>
+                        <meta
+                            name="description"
+                            content={`${bio.substring(0, 75)}...`}
+                        />
+                        <meta property="og:type" content="website" />
+                        <meta
+                            property="og:url"
+                            content={window.location.href}
+                        />
+                        <meta property="og:title" content={title} />
+                        <meta
+                            property="og:description"
+                            content={`${bio.substring(0, 75)}...`}
+                        />
+                        <meta property="og:image" content={featuredImage} />
+                    </Helmet>
                     <div className="column-50-text">
                         <h1>{title}</h1>
                         <p className="technical">technical brief</p>
