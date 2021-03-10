@@ -6,7 +6,7 @@ import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
 import Salisbury from "../../assets/images/salisbury/salisbury-mockup-template.jpg";
 import Hd from "../../assets/images/hd/huntingtondigital-featured.jpg";
 import Travelwell from "../../assets/images/travelwell/travel-featured-single.jpg";
-import Chiro from "../../assets/images/chiro/chiro-featured-mockup-beige.jpg";
+import Chiro from "../../assets/images/chiro/chiro-mockup-template-ipad.jpg";
 
 class HomePage extends React.Component {
     state = {
@@ -52,7 +52,6 @@ class HomePage extends React.Component {
     };
 
     render() {
-        console.log(this.state.projects);
         return (
             <div className="home">
                 {this.state.projects.map(({ id, ...otherProps }) => (

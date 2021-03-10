@@ -4,28 +4,28 @@
         "title": "Orange County Plastic Surgery",
         "routeName": "ocps",
         "website": "orangecountyplasticsurgery.com",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "Orange County Plastic Surgery was looking to improve the aesthetic and user experience of their website and boost their SEO around Southern California. During the creation of their website I was responsible for building the landing, procedures, photos, and before & after patient photos pages, all translated via wireframe. The tech we used included Javascript (ES6), HTML, CSS, and jQuery. Since we needed a place to store thousands of photos, I decided to use Contentful as a headless CMS and was responsible for the set up and input of all patients' photos and content, as well as creating the functions to fetch the data and dynamically create individual pages. After the completion and approval of their new site, I used Amazon Web Services for hosting and integrated a chat service, ApexChat.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "Javascript (ES6)"
             },
             {
-                "title": "UX/UI Design"
+                "title": "jQuery"
             },
             {
-                "title": "SEO Enhancement"
-            },
-            {
-                "title": "Web Design"
-            },
-            {
-                "title": "Performance Optimization"
-            },
-            {
-                "title": "CMS Integration"
+                "title": "HTML5/CSS3"
             },
             {
                 "title": "RESTful APIs"
+            },
+            {
+                "title": "CMS Integration: Contentful"
+            },
+            {
+                "title": "Amazon Web Services (AWS)"
+            },
+            {
+                "title": "UI/UX Enhancement"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/62/b3/IY5JaKyM_o.jpg",
@@ -49,28 +49,25 @@
         "title": "Huntington Digital",
         "routeName": "huntingtondigital",
         "website": "huntingtondigitaloc.com",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "This was a complete rebrand of Huntington Digital's online presence and logo. Their website was very generic and wanted something that better encapsulated their business style and culture. We decided to go with a darker theme with aggressive, red highlights and bright colors throughout with smoooth loading/scroll animations on each section. I was responsible for coding the landing, services, and contact pages from our designer's wireframes with a mobile-first approach. I used PHPMailer to handle the contact form's POST requests. The tech used were Javascript, jQuery, HTML5, CSS3, PHPMailer, and SwiperJS.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "Javascript (ES6)"
             },
             {
-                "title": "Web Development"
+                "title": "jQuery"
             },
             {
-                "title": "Web Development"
+                "title": "HTML5/CSS3"
             },
             {
-                "title": "Web Development"
+                "title": "PHPMailer"
             },
             {
-                "title": "Web Development"
+                "title": "SwiperJS"
             },
             {
-                "title": "Web Development"
-            },
-            {
-                "title": "Web Development"
+                "title": "Postman"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/50/33/mbrtOPIL_o.jpg",
@@ -94,28 +91,28 @@
         "title": "Pocket Statz",
         "routeName": "pocketstatz",
         "website": "pocketstatz.com",
-        "bio": "lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data lorem ipsum placeholder text dummy data ",
+        "bio": "Check the latest stats from your favorite sports teams! My love of sports led me to want to create an app to quickly check game stats on the go. This was a fun project that my friend's and I made to help further our learning of React and Redux. The result is a fast loading web app with a mobile-first design in mind including user authentication with persistent login and guest access with saved teams to local storage. The tech used included React, Redux, Axios, SCSS, MySQL, and PHP. All teams data is fetched using Axios from the MySportsFeeds Sports Data API. My roles included creating the overall design and wireframe, creating reusable components, fetching and rendering API data, and assisting in database setup.",
         "deliverables": [
             {
-                "title": "Web Development"
+                "title": "React"
             },
             {
-                "title": "Web Development"
+                "title": "Redux"
             },
             {
-                "title": "Web Development"
+                "title": "SCSS"
             },
             {
-                "title": "Web Development"
+                "title": "MySQL"
             },
             {
-                "title": "Web Development"
+                "title": "PHP"
             },
             {
-                "title": "Web Development"
+                "title": "Axios"
             },
             {
-                "title": "Web Development"
+                "title": "User Authentication"
             }
         ],
         "featuredImage": "https://images2.imgbox.com/52/bf/mqUKuHun_o.jpg",

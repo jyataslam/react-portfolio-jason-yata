@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 
 const Project = ({ title, imageUrl, linkUrl, history, match }) => {
     const img = imageUrl;
-    console.log(img);
     return (
         <div
             className="project-item"
