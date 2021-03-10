@@ -3,6 +3,7 @@ import "./resumepage.scss";
 import resume from "../../assets/images/resume.jpg";
 import mobileResume from "../../assets/images/resume-portfolio-mobile.jpg";
 import { SRLWrapper } from "simple-react-lightbox";
+import { Helmet } from "react-helmet";
 
 const ResumePage = () => {
     const options = {
@@ -21,6 +22,27 @@ const ResumePage = () => {
     };
     return (
         <SRLWrapper options={options}>
+            <Helmet>
+                <title>Resume | Jason Yata</title>
+                <meta
+                    name="description"
+                    content="Jason Yata's Resumé for 2021"
+                />
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:url"
+                    content="https://jasonyataportfolio.netlify.app/resume"
+                />
+                <meta property="og:title" content="Jason Yata | Portfolio" />
+                <meta
+                    property="og:description"
+                    content="Jason Yata's Resumé for 2021"
+                />
+                <meta
+                    property="og:image"
+                    content="https://jasonyataportfolio.netlify.app/static/media/resume.775cf2e4.jpg"
+                />
+            </Helmet>
             <div className="resume">
                 <img
                     src={resume}

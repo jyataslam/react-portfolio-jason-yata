@@ -38,7 +38,7 @@ class PodcastPage extends React.Component {
                     />
                     <meta
                         property="og:image"
-                        content="https://jasonyataportfolio.netlify.app/static/media/logo-bfe.eb2c742c.png"
+                        content="https://images2.imgbox.com/83/2f/pojzlos4_o.jpg"
                     />
                 </Helmet>
                 <img
