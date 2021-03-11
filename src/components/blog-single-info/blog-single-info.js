@@ -10,12 +10,14 @@ import {
     TwitterIcon,
     RedditIcon,
 } from "react-share";
+import * as Markdown from "react-markdown";
 import { Helmet } from "react-helmet";
 
 const BlogSingleInfo = ({ info }) => {
-    const { content, date, featuredImg, images, title } = info;
+    const { contentRegular, date, featuredImage, title } = info;
     const size = "2.5rem";
     const currentUrl = window.location.href;
+    const featuredImg = featuredImage.fields.file.url;
 
     return (
         <section className="blog-single-info">
@@ -97,49 +99,7 @@ const BlogSingleInfo = ({ info }) => {
                     </div>
                 </div>
                 <div className="hero-header-container">
-                    {content[0] !== undefined ? <p>{content[0].text}</p> : ""}
-
-                    {content[1] !== undefined ? <p>{content[1].text}</p> : ""}
-                    {images[0] !== undefined ? (
-                        <img
-                            src={images[0].url}
-                            alt={title}
-                            className="image"
-                        />
-                    ) : (
-                        ""
-                    )}
-                    {content[2] !== undefined ? <p>{content[2].text}</p> : ""}
-                    {content[3] !== undefined ? <p>{content[3].text}</p> : ""}
-                    {images[1] !== undefined ? (
-                        <img
-                            src={images[1].url}
-                            alt={title}
-                            className="image"
-                        />
-                    ) : (
-                        ""
-                    )}
-                    {images[2] !== undefined ? (
-                        <img
-                            src={images[2].url}
-                            alt={title}
-                            className="image"
-                        />
-                    ) : (
-                        ""
-                    )}
-                    {content[4] !== undefined ? <p>{content[4].text}</p> : ""}
-                    {images[3] !== undefined ? (
-                        <img
-                            src={images[3].url}
-                            alt={title}
-                            className="image"
-                        />
-                    ) : (
-                        ""
-                    )}
-                    {content[5] !== undefined ? <p>{content[5].text}</p> : ""}
+                    <Markdown source={contentRegular} />
                 </div>
             </div>
         </section>

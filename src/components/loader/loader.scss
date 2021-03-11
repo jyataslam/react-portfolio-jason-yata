@@ -4,14 +4,14 @@ $med: 768px;
 $small: 554px;
 
 .loader {
-    height: 64vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
 
     img {
-        width: 8rem;
+        width: 5rem;
     }
 }

@@ -4,38 +4,34 @@ import { withRouter } from "react-router-dom";
 
 const BlogCard = ({
     title,
-    date,
-    featuredImg,
     slug,
-    content,
+    match: { url },
+    featuredImage,
+    date,
+    contentRegular,
     history,
-    match,
 }) => {
+    const featuredImg = featuredImage.fields.file.url;
     const MAX_LENGTH = 300;
     return (
         <div className="blog-card">
             <div
                 className="image-container"
-                onClick={() => history.push(`${match.url}${slug}`)}
+                onClick={() => history.push(`${url}/${slug}`)}
                 style={{ backgroundImage: `url(${featuredImg})` }}
             ></div>
             <div className="text-container">
                 <h1
-                    onClick={() => history.push(`${match.url}${slug}`)}
+                    onClick={() => history.push(`${url}${slug}`)}
                     className="title"
                 >
                     {title}
                 </h1>
                 <h3>{date}</h3>
-
-                {content[0].text.length > MAX_LENGTH ? (
-                    <p>{`${content[0].text.substring(0, MAX_LENGTH)}...`}</p>
-                ) : (
-                    <p>content[0].text</p>
-                )}
+                <p>{`${contentRegular.substring(0, MAX_LENGTH)}...`}</p>
                 <p
                     className="button"
-                    onClick={() => history.push(`${match.url}${slug}`)}
+                    onClick={() => history.push(`${url}/${slug}`)}
                 >
                     Read More
                 </p>

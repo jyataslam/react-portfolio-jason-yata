@@ -1,12 +1,29 @@
 import React from "react";
 import "./blogpage.scss";
 import BlogCard from "../../components/blog-card/blog-card";
-import BLOG_DATA from "../../assets/data/blogs.data";
+// import BLOG_DATA from "../../assets/data/blogs.data";
+import Loader from "../../components/loader/loader";
 import { Helmet } from "react-helmet";
+import * as contentful from "contentful";
 
 export default class BlogPage extends React.Component {
     state = {
-        posts: BLOG_DATA,
+        posts: [],
+    };
+
+    componentDidMount() {
+        this.fetchBlogs();
+    }
+
+    fetchBlogs = () => {
+        var client = contentful.createClient({
+            space: "we4cu65w8bh3",
+            accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
+        });
+
+        client.getEntries().then((entries) => {
+            this.setState({ posts: entries.items });
+        });
     };
 
     render() {
@@ -41,9 +58,13 @@ export default class BlogPage extends React.Component {
                     <h3>Latest Posts</h3>
                 </div>
                 <div className="blog-posts-container">
-                    {this.state.posts.map(({ id, ...otherProps }, index) => (
-                        <BlogCard key={index} {...otherProps} />
-                    ))}
+                    {this.state.posts !== null ? (
+                        this.state.posts.map((item, index) => {
+                            return <BlogCard key={index} {...item.fields} />;
+                        })
+                    ) : (
+                        <Loader />
+                    )}
                 </div>
             </section>
         );

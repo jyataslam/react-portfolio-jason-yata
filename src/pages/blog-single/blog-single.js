@@ -1,23 +1,45 @@
 import React from "react";
-import BLOG_DATA from "../../assets/data/blogs.data";
+// import BLOG_DATA from "../../assets/data/blogs.data";
 import BlogSingleInfo from "../../components/blog-single-info/blog-single-info";
+import * as contentful from "contentful";
 
 export default class BlogPageSingle extends React.Component {
     state = {
-        data: BLOG_DATA,
+        data: null,
+    };
+
+    componentDidMount() {
+        this.fetchBlogs();
+    }
+
+    fetchBlogs = () => {
+        var client = contentful.createClient({
+            space: "we4cu65w8bh3",
+            accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
+        });
+
+        client
+            .getEntries({
+                "fields.slug": this.props.match.params.blogName,
+                content_type: "blog",
+            })
+            .then((entries) => {
+                entries.items.forEach((entry) => {
+                    this.setState({ data: entry.fields });
+                    console.log(entry.fields);
+                });
+            });
     };
 
     render() {
-        const currentSlug = this.props.match.params.blogName;
+        console.log("current blog single state", this.state.data);
         return (
             <div className="blog-single">
-                {this.state.data.map((item, index) => {
-                    return `/blog${item.slug}` === `/blog/${currentSlug}` ? (
-                        <BlogSingleInfo info={item} key={index} />
-                    ) : (
-                        ""
-                    );
-                })}
+                {this.state.data !== null ? (
+                    <BlogSingleInfo info={this.state.data} />
+                ) : (
+                    ""
+                )}
             </div>
         );
     }

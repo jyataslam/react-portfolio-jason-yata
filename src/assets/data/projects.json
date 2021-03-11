@@ -91,7 +91,7 @@
         "title": "Pocket Statz",
         "routeName": "pocketstatz",
         "website": "pocketstatz.com",
-        "bio": "Check the latest stats from your favorite sports teams! My love of sports led me to want to create an app to quickly check game stats on the go. This was a fun project that my friend's and I made to help further our learning of React and Redux. The result is a fast loading web app with a mobile-first design in mind including user authentication with persistent login and guest access with saved teams to local storage. The tech used included React, Redux, Axios, SCSS, MySQL, and PHP. All teams data is fetched using Axios from the MySportsFeeds Sports Data API. My roles included creating the overall design and wireframe, creating reusable components, fetching and rendering API data, and assisting in database setup.",
+        "bio": "Check the latest stats from your favorite sports teams! My love of sports led me to want to create an app to quickly check game stats on the go. This was a fun project that my friends and I made to help further our learning of React and Redux. The result is a fast loading web app with a mobile-first design in mind including user authentication with persistent login and guest access with saved teams to local storage. The tech used included React, Redux, Axios, SCSS, MySQL, and PHP. All teams data is fetched using Axios from the MySportsFeeds Sports Data API. My roles included creating the overall design and wireframe, creating reusable components, fetching and rendering API data, and assisting in database setup.",
         "deliverables": [
             {
                 "title": "React"
