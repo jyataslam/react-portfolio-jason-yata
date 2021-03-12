@@ -31,7 +31,7 @@ const ResumePage = () => {
                 <meta property="og:type" content="website" />
                 <meta
                     property="og:url"
-                    content="https://jasonyataportfolio.netlify.app/resume"
+                    content="https://jasonyata.com/resume"
                 />
                 <meta property="og:title" content="Jason Yata | Portfolio" />
                 <meta
@@ -40,7 +40,7 @@ const ResumePage = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://jasonyataportfolio.netlify.app/static/media/resume.775cf2e4.jpg"
+                    content="https://jasonyata.com/static/media/resume.775cf2e4.jpg"
                 />
             </Helmet>
             <div className="resume">

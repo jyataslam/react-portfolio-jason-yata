@@ -62,10 +62,7 @@ class HomePage extends React.Component {
                         content="Portfolio Website for Jason Yata, Development & Design"
                     />
                     <meta property="og:type" content="website" />
-                    <meta
-                        property="og:url"
-                        content="https://jasonyataportfolio.netlify.app"
-                    />
+                    <meta property="og:url" content="https://jasonyata.com" />
                     <meta
                         property="og:title"
                         content="Jason Yata | Portfolio"
@@ -76,7 +73,7 @@ class HomePage extends React.Component {
                     />
                     <meta
                         property="og:image"
-                        content="https://jasonyataportfolio.netlify.app/static/media/headshot.3ca03807.jpg"
+                        content="https://jasonyata.com/static/media/headshot.3ca03807.jpg"
                     />
                 </Helmet>
                 {this.state.projects.map(({ id, ...otherProps }) => (

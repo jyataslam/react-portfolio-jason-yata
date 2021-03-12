@@ -29,7 +29,7 @@ class PodcastPage extends React.Component {
                     <meta property="og:type" content="website" />
                     <meta
                         property="og:url"
-                        content="https://jasonyataportfolio.netlify.app/blog"
+                        content="https://jasonyata.com/podcast"
                     />
                     <meta property="og:title" content="Podcast | Jason Yata" />
                     <meta

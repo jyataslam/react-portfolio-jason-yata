@@ -10,10 +10,7 @@ const AboutPage = () => {
                 <title>About | Jason Yata</title>
                 <meta name="description" content="Learn about Jason Yata" />
                 <meta property="og:type" content="website" />
-                <meta
-                    property="og:url"
-                    content="https://jasonyataportfolio.netlify.app/about"
-                />
+                <meta property="og:url" content="https://jasonyata.com/about" />
                 <meta property="og:title" content="Jason Yata | Portfolio" />
                 <meta
                     property="og:description"
@@ -21,7 +18,7 @@ const AboutPage = () => {
                 />
                 <meta
                     property="og:image"
-                    content="https://jasonyataportfolio.netlify.app/static/media/headshot.3ca03807.jpg"
+                    content="https://jasonyata.com/static/media/headshot.3ca03807.jpg"
                 />
             </Helmet>
             <section className="about site-width">

@@ -32,8 +32,6 @@ class ProjectPage extends Component {
             images,
         } = this.state[name];
 
-        console.log(window.location.href);
-
         return (
             <SRLWrapper options={options}>
                 <section className="project">

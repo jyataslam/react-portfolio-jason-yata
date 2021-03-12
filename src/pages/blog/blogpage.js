@@ -44,7 +44,7 @@ export default class BlogPage extends React.Component {
                     <meta property="og:type" content="website" />
                     <meta
                         property="og:url"
-                        content="https://jasonyataportfolio.netlify.app/blog"
+                        content="https://jasonyata.com/blog"
                     />
                     <meta property="og:title" content="Blog | Jason Yata" />
                     <meta
@@ -53,7 +53,7 @@ export default class BlogPage extends React.Component {
                     />
                     <meta
                         property="og:image"
-                        content="https://jasonyataportfolio.netlify.app/static/media/headshot.3ca03807.jpg"
+                        content="https://jasonyata.com/static/media/headshot.3ca03807.jpg"
                     />
                 </Helmet>
                 <div
