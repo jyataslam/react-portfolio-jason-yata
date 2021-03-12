@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import "./blog-single-info.scss";
 import {
     TwitterShareButton,
@@ -26,7 +26,7 @@ const BlogSingleInfo = ({ info }) => {
     });
 
     function useDarkBg() {
-        useEffect(() => {
+        useLayoutEffect(() => {
             document.body.style.backgroundColor = "#000";
 
             return () => {
