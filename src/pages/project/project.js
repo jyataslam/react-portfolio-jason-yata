@@ -31,7 +31,6 @@ class ProjectPage extends Component {
             featuredImage,
             images,
         } = this.state[name];
-
         return (
             <SRLWrapper options={options}>
                 <section className="project">

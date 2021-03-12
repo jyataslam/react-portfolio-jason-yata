@@ -33,6 +33,7 @@ export default class BlogPage extends React.Component {
     };
 
     render() {
+        console.log(this.state.posts.length);
         return (
             <section id="blog" className="blog site-width">
                 <Helmet>
@@ -64,7 +65,7 @@ export default class BlogPage extends React.Component {
                     <h3>Latest Posts</h3>
                 </div>
                 <div className="blog-posts-container">
-                    {this.state.posts !== null ? (
+                    {this.state.posts.length !== 0 ? (
                         this.state.posts.map((item, index) => {
                             return <BlogCard key={index} {...item.fields} />;
                         })

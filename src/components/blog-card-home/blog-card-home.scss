@@ -3,7 +3,7 @@ $large: 1024px;
 $med: 768px;
 $small: 554px;
 
-.blog-card {
+.blog-card-home {
     display: flex;
     margin-bottom: 1.5rem;
 
@@ -56,7 +56,6 @@ $small: 554px;
 
         .title {
             align-self: flex-start;
-            font-family: 'Cinzel', serif;
 
             @media screen and (min-width: $xlarge) {
                 font-size: 40px;

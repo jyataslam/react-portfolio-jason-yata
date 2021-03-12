@@ -9,9 +9,10 @@ $small: 554px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
+    top: 2rem;
 
     img {
-        width: 5rem;
+        width: 6rem;
     }
 }

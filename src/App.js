@@ -9,6 +9,7 @@ import ResumePage from "./pages/resume/resumepage";
 import PodcastPage from "./pages/podcast/podcastpage";
 import BlogPage from "./pages/blog/blogpage";
 import BlogSinglePage from "./pages/blog-single/blog-single";
+import WorkPage from "./pages/work/workpage";
 
 function App() {
     return (
@@ -17,6 +18,8 @@ function App() {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/about" component={AboutPage} />
+                <Route path="/work/:projectName" component={ProjectPage} />
+                <Route path="/work" component={WorkPage} />
                 <Route path="/resume" component={ResumePage} />
                 <Route path="/podcast" component={PodcastPage} />
                 <Route path="/blog/:blogName" component={BlogSinglePage} />

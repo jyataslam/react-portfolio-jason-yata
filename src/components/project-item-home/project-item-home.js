@@ -1,5 +1,5 @@
 import React from "react";
-import "./project.scss";
+import "./project-item-home.scss";
 import { withRouter } from "react-router-dom";
 
 const Project = ({ title, imageUrl, linkUrl, history, match }) => {
@@ -7,7 +7,7 @@ const Project = ({ title, imageUrl, linkUrl, history, match }) => {
     return (
         <div
             className="project-item"
-            onClick={() => history.push(`${match.url}/${linkUrl}`)}
+            onClick={() => history.push(`${match.url}work/${linkUrl}`)}
             style={{
                 backgroundImage: `url(${img})`,
             }}

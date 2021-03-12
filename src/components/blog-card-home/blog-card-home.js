@@ -1,5 +1,5 @@
 import React from "react";
-import "./blog-card.scss";
+import "./blog-card-home.scss";
 import { withRouter } from "react-router-dom";
 
 const BlogCard = ({
@@ -12,22 +12,22 @@ const BlogCard = ({
     history,
 }) => {
     const featuredImg = featuredImage.fields.file.url;
-    const MAX_LENGTH = 300;
+    const MAX_LENGTH = 100;
     const formattedDate = new Date(date).toLocaleDateString("en-us", {
         year: "numeric",
         month: "long",
         day: "numeric",
     });
     return (
-        <div className="blog-card">
+        <div className="blog-card-home">
             <div
                 className="image-container"
-                onClick={() => history.push(`${url}/${slug}`)}
+                onClick={() => history.push(`${url}blog/${slug}`)}
                 style={{ backgroundImage: `url(${featuredImg})` }}
             ></div>
             <div className="text-container">
                 <h1
-                    onClick={() => history.push(`${url}/${slug}`)}
+                    onClick={() => history.push(`${url}blog/${slug}`)}
                     className="title"
                 >
                     {title}
@@ -36,7 +36,7 @@ const BlogCard = ({
                 <p>{`${contentRegular.substring(0, MAX_LENGTH)}...`}</p>
                 <p
                     className="button"
-                    onClick={() => history.push(`${url}/${slug}`)}
+                    onClick={() => history.push(`${url}blog/${slug}`)}
                 >
                     Read More
                 </p>

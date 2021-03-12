@@ -1,17 +1,20 @@
 import React from "react";
 import "./homepage.scss";
 import { Helmet } from "react-helmet";
-import ProjectItem from "../../components/project-item/project";
+import { Link } from "react-router-dom";
+import * as contentful from "contentful";
+import ProjectItemHome from "../../components/project-item-home/project-item-home";
 import Ocps from "../../assets/images/ocps/ocps-mockup-template-3.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
-import Salisbury from "../../assets/images/salisbury/salisbury-mockup-template.jpg";
 import Hd from "../../assets/images/hd/huntingtondigital-featured.jpg";
 import Travelwell from "../../assets/images/travelwell/travel-featured-single.jpg";
-import Chiro from "../../assets/images/chiro/chiro-mockup-template-ipad.jpg";
+import BlogCardHome from "../../components/blog-card-home/blog-card-home";
+import Loader from "../../components/loader/loader";
 
 class HomePage extends React.Component {
     state = {
         isLoaded: false,
+        posts: [],
         projects: [
             {
                 title: "Orange County Plastic Surgery",
@@ -26,22 +29,10 @@ class HomePage extends React.Component {
                 linkUrl: "huntingtondigital",
             },
             {
-                title: "Salisbury Plastic Surgery",
-                id: 6,
-                imageUrl: Salisbury,
-                linkUrl: "salisburyps",
-            },
-            {
                 title: "Pocket Statz",
                 id: 4,
                 imageUrl: PocketStatz,
                 linkUrl: "pocketstatz",
-            },
-            {
-                title: "Gutierrez Chiropractic",
-                id: 5,
-                imageUrl: Chiro,
-                linkUrl: "gutierrezchiro",
             },
             {
                 title: "TravelWell",
@@ -52,9 +43,31 @@ class HomePage extends React.Component {
         ],
     };
 
+    componentDidMount() {
+        this.fetchBlogs();
+    }
+
+    fetchBlogs = () => {
+        var client = contentful.createClient({
+            space: "we4cu65w8bh3",
+            accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
+        });
+
+        client
+            .getEntries({
+                order: "-sys.createdAt",
+                limit: 3,
+                content_type: "blog",
+            })
+            .then((entries) => {
+                console.log(entries);
+                this.setState({ posts: entries.items });
+            });
+    };
+
     render() {
         return (
-            <div className="home">
+            <main className="home">
                 <Helmet>
                     <title>Jason Yata | Portfolio</title>
                     <meta
@@ -76,10 +89,44 @@ class HomePage extends React.Component {
                         content="https://jasonyata.com/static/media/headshot.3ca03807.jpg"
                     />
                 </Helmet>
-                {this.state.projects.map(({ id, ...otherProps }) => (
-                    <ProjectItem key={id} {...otherProps} />
-                ))}
-            </div>
+                <section className="work-section">
+                    <div className="header-container">
+                        <h1>Featured Work</h1>
+                        <Link to="/work">view all</Link>
+                    </div>
+                    {this.state.projects.map(({ id, ...otherProps }) => (
+                        <ProjectItemHome key={id} {...otherProps} />
+                    ))}
+                    <Link to="/work" className="view-work-btn">
+                        All Work
+                    </Link>
+                </section>
+                <section className="blog-section">
+                    <div className="header-container">
+                        <h1>Latest Blogs</h1>
+                        <Link to="/blog">view all</Link>
+                    </div>
+                    <div className="blog-posts-container">
+                        {this.state.posts.length !== 0 ? (
+                            this.state.posts.map((item, index) => {
+                                return (
+                                    <BlogCardHome
+                                        key={index}
+                                        {...item.fields}
+                                    />
+                                );
+                            })
+                        ) : (
+                            <Loader />
+                        )}
+                        {this.state.posts.length !== 0 ? (
+                            <Link to="/blog">All Blogs</Link>
+                        ) : (
+                            ""
+                        )}
+                    </div>
+                </section>
+            </main>
         );
     }
 }

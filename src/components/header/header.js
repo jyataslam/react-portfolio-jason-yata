@@ -35,8 +35,7 @@ class Header extends React.Component {
                     <NavLink
                         className="link"
                         activeClassName="active"
-                        exact
-                        to="/"
+                        to="/work"
                     >
                         Work
                     </NavLink>
@@ -87,8 +86,7 @@ class Header extends React.Component {
                     <NavLink
                         className="link"
                         activeClassName="active"
-                        exact
-                        to="/"
+                        to="/work"
                         onClick={this.sidebarClose}
                     >
                         Work
@@ -96,7 +94,6 @@ class Header extends React.Component {
                     <NavLink
                         className="link"
                         activeClassName="active"
-                        exact
                         to="/podcast"
                         onClick={this.sidebarClose}
                     >
