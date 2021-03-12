@@ -13,6 +13,11 @@ const BlogCard = ({
 }) => {
     const featuredImg = featuredImage.fields.file.url;
     const MAX_LENGTH = 300;
+    const formattedDate = new Date(date).toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
     return (
         <div className="blog-card">
             <div
@@ -27,7 +32,7 @@ const BlogCard = ({
                 >
                     {title}
                 </h1>
-                <h3>{date}</h3>
+                <h3>{formattedDate}</h3>
                 <p>{`${contentRegular.substring(0, MAX_LENGTH)}...`}</p>
                 <p
                     className="button"

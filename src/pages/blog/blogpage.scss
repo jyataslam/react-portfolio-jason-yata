@@ -67,6 +67,7 @@ $small: 554px;
 
         @media screen and (max-width: $small) {
             width: 100%;
+            padding-bottom: 25px;
         }
 
         .photo-container {

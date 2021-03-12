@@ -30,8 +30,8 @@ $small: 554px;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgb(255,255,255);
-            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8281687675070029) 20%, rgba(255,255,255,0) 100%);
+            background: white;
+            background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0.828) 15%, rgba(255,255,255,0) 100%);
         }
 
         .hero-img-container {
@@ -68,7 +68,6 @@ $small: 554px;
                     padding-bottom: 30px;
                     max-width: 1500px;
 
-
                     @media screen and (max-width: $large-special) {
                         padding-right: 0;
                     }
@@ -85,8 +84,9 @@ $small: 554px;
                         line-height: 4rem;
                         margin-bottom: 0;
                         letter-spacing: 0;
+                        color: #333;
 
-                        @media screen and (max-width: $med) and (max-height: $small) {
+                        @media screen and (max-height: $small) {
                             font-size: 2rem;
                             line-height: 2rem;
                         }
@@ -148,6 +148,78 @@ $small: 554px;
                 padding: 0 3.2vw 1.5vw;
             }
 
+            img {
+                width: 100%;
+            }
+
+            blockquote {
+                position: relative;
+                margin-left: 7rem;
+                display: inline-block;
+                margin-top:2rem;
+                margin-bottom: 2rem;
+
+                @media screen and (max-width: $med) {
+                    margin-left: 5rem;
+                }
+
+                @media screen and (max-width: $small) {
+                    margin-left: 1rem;
+                }
+
+                &:before {
+                    content: "";
+                    height: 100%;
+                    width: 1px;
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(13, 4, 54) 30%, rgb(104, 2, 70) 80%, rgba(0, 0, 0, 0));
+                    display: block;
+                    position: absolute;
+                    left: -1rem;
+
+                    @media screen and  (max-width: $small) {
+                        left: -1rem;
+                    }
+                }
+
+                p {
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    color: #4354aa;
+                    position: relative;
+                    text-transform: uppercase;
+                    font-family: 'Cinzel', serif;
+                    font-size: 2.5rem;
+                    line-height: 2.7rem;
+                    margin: 0 !important;
+                    margin-right: 50px !important;
+                    background-color: #CA4246;
+                    background-image: linear-gradient(
+                            45deg,
+                            #CA4246 16.666%, 
+                            #E16541 16.666%, 
+                            #c25638 33.333%, 
+                            #8B9862 50%, 
+                            #51648f 66.666%, 
+                            #A7489B 83.333%);
+                    background-size: 100%;
+                    background-repeat: repeat;
+
+                    @media screen and (max-width: $large) {
+                        font-size: 2rem;
+                        line-height: 2.2rem;
+                    }
+
+                    @media screen and (max-width: $med) {
+                        margin-right: 0 !important;
+                    }
+
+                    @media screen and (max-width: $small) {
+                        font-size: 1.4rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+
             .hero-header-container-inner {
                 width: 80%;
 
@@ -174,23 +246,80 @@ $small: 554px;
 
             p {
                 font-family: 'Lora', serif;
-                font-weight: 400;
+                font-weight: 500;
                 font-style: normal;
                 font-size: 16px;
                 line-height: 1.8em;
-                letter-spacing: .02em;
+                letter-spacing: .025em;
                 text-rendering: optimizeLegibility;
                 color: #333;
-                margin-top: 3em;
-                margin-bottom: 3em;
+                margin-top: 2em;
 
                 &:first-child {
                     margin-top: 2em;
                 }
             }
 
+            a {
+                text-decoration: none;
+                color: #333;
+                position: relative;
+                padding-bottom: 2px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: #CA4246;
+                    background-image: linear-gradient(
+                            45deg,
+                            #CA4246 16.666%, 
+                            #E16541 16.666%, 
+                            #c25638 33.333%, 
+                            #8B9862 50%, 
+                            #51648f 66.666%, 
+                            #A7489B 83.333%);
+                    background-size: 100%;
+                    background-repeat: repeat;
+                    transition: all .8s ease-out;
+                }
+
+                &:hover::before {
+                    background-image: linear-gradient(
+                            45deg,
+                            #b34d51 16.666%, 
+                            #af563e 16.666%, 
+                            #993b21 33.333%, 
+                            #687930 50%, 
+                            #2d3955 66.666%, 
+                            #632a5b 83.333%);
+                }
+            }
+
             .image {
                 width: 100%;
+            }
+
+            .share-footer {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                
+                h3 {
+                    font-family: 'Work Sans', sans-serif;
+                    font-style: normal;
+                    letter-spacing: .15em;
+                    text-transform: uppercase;
+                    color: #333;
+                    font-size: 1rem;
+                    font-weight: bold;
+
+                    @media screen and (max-width: $small) {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }

@@ -18,6 +18,23 @@ const BlogSingleInfo = ({ info }) => {
     const size = "2.5rem";
     const currentUrl = window.location.href;
     const featuredImg = featuredImage.fields.file.url;
+    const formattedDate = new Date(date).toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+
+    // function useDarkBg() {
+    //     useEffect(() => {
+    //         document.body.style.backgroundColor = "#000";
+
+    //         return () => {
+    //             document.body.style.backgroundColor = "#fff";
+    //         };
+    //     });
+    // }
+
+    // useDarkBg();
 
     return (
         <section className="blog-single-info">
@@ -44,7 +61,7 @@ const BlogSingleInfo = ({ info }) => {
                     <div className="overlay-inner">
                         <div className="hero-header-container-inner">
                             <h1>{title}</h1>
-                            <h3>{date}</h3>
+                            <h3>{formattedDate}</h3>
                             <div className="icons-container">
                                 <FacebookShareButton
                                     title={title}
@@ -100,6 +117,57 @@ const BlogSingleInfo = ({ info }) => {
                 </div>
                 <div className="hero-header-container">
                     <Markdown source={contentRegular} />
+                    <div className="icons-container share-footer">
+                        <h3>Share</h3>
+                        <FacebookShareButton
+                            title={title}
+                            className="icon"
+                            url={currentUrl}
+                        >
+                            <FacebookIcon
+                                size={size}
+                                round={true}
+                                bgStyle={{ fill: "transparent" }}
+                                iconFillColor={"#3b5998"}
+                            />
+                        </FacebookShareButton>
+                        <TwitterShareButton
+                            title={title}
+                            className="icon"
+                            url={currentUrl}
+                        >
+                            <TwitterIcon
+                                size={size}
+                                round={true}
+                                bgStyle={{ fill: "transparent" }}
+                                iconFillColor={"#00aced"}
+                            />
+                        </TwitterShareButton>
+                        <RedditShareButton
+                            title={title}
+                            className="icon"
+                            url={currentUrl}
+                        >
+                            <RedditIcon
+                                size={size}
+                                round={true}
+                                bgStyle={{ fill: "transparent" }}
+                                iconFillColor={"#ff4500"}
+                            />
+                        </RedditShareButton>
+                        <LinkedinShareButton
+                            title={title}
+                            className="icon"
+                            url={currentUrl}
+                        >
+                            <LinkedinIcon
+                                size={size}
+                                round={true}
+                                bgStyle={{ fill: "transparent" }}
+                                iconFillColor={"#007fb1"}
+                            />
+                        </LinkedinShareButton>
+                    </div>
                 </div>
             </div>
         </section>
