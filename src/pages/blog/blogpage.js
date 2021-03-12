@@ -21,9 +21,15 @@ export default class BlogPage extends React.Component {
             accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
         });
 
-        client.getEntries().then((entries) => {
-            this.setState({ posts: entries.items });
-        });
+        client
+            .getEntries({
+                order: "-sys.createdAt",
+                content_type: "blog",
+            })
+            .then((entries) => {
+                console.log(entries);
+                this.setState({ posts: entries.items });
+            });
     };
 
     render() {

@@ -152,6 +152,14 @@ $small: 554px;
                 width: 100%;
             }
 
+            h1 {
+                font-family: 'Cinzel', serif;
+                position: relative;
+                top: .9em;
+                font-size: 2rem;
+                margin-top: 0;
+            }
+
             blockquote {
                 position: relative;
                 margin-left: 7rem;
@@ -313,12 +321,8 @@ $small: 554px;
                     letter-spacing: .15em;
                     text-transform: uppercase;
                     color: #333;
-                    font-size: 1rem;
+                    font-size: 12px;
                     font-weight: bold;
-
-                    @media screen and (max-width: $small) {
-                        font-size: 12px;
-                    }
                 }
             }
         }
