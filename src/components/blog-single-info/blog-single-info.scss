@@ -97,12 +97,12 @@ $small: 554px;
 
                         @media screen and (max-height: $small) {
                             font-size: 2rem;
-                            line-height: 2rem;
+                            line-height: 2.2rem;
                         }
                 
                         @media screen and (max-width: $small) {
                             font-size: 2rem;
-                            line-height: 2rem;
+                            line-height: 2.2rem;
                         }
                     }
     
@@ -188,31 +188,36 @@ $small: 554px;
                 // background-image: linear-gradient(70deg,#083df9 20%,#ac7f54 60%,#ee06f2);
                 background-size: 100%;
                 background-repeat: repeat;
+
+                @media screen and (max-width: $small) {
+                    line-height: 1.9rem;
+                    font-size: 1.8rem;
+                }
             }
 
             blockquote {
                 position: relative;
-                margin-left: 7rem;
+                margin-left: 5rem;
                 display: inline-block;
-                margin-top:2rem;
-                margin-bottom: 2rem;
+                margin-top: 4rem;
+                margin-bottom: 4rem;
 
                 @media screen and (max-width: $med) {
                     margin-left: 5rem;
                 }
 
                 @media screen and (max-width: $small) {
-                    margin-left: 1rem;
+                    margin: 3rem 0 3rem 1rem;
                 }
 
                 &:before {
                     content: "";
                     height: 100%;
-                    width: 1px;
-                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(13, 4, 54) 30%, rgb(104, 2, 70) 80%, rgba(0, 0, 0, 0));
+                    width: 2px;
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #b7b7b796 45%, #b7b7b796 75%, rgba(0, 0, 0, 0));
                     display: block;
                     position: absolute;
-                    left: -1rem;
+                    left: -4rem;
 
                     @media screen and  (max-width: $small) {
                         left: -1rem;
@@ -242,7 +247,7 @@ $small: 554px;
                     //         #8B9862 50%, 
                     //         #51648f 66.666%, 
                     //         #A7489B 83.333%);
-                    background-image: linear-gradient(70deg,#083df9 20%,#ac7f54 60%,#ee06f2);
+                    background-image: linear-gradient(70deg,#083df9 35%,#ac7f54 70%,#ee06f2);
                     background-size: 100%;
                     background-repeat: repeat;
 
@@ -257,7 +262,7 @@ $small: 554px;
 
                     @media screen and (max-width: $small) {
                         font-size: 1.4rem;
-                        line-height: 1.6rem;
+                        line-height: 2rem;
                     }
                 }
             }
