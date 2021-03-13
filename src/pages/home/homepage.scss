@@ -72,10 +72,6 @@ $small: 554px;
                 background-image: linear-gradient(70deg,#083df9 20%,#d18a48 60%,#ee06f2);
                 background-size: 100%;
                 background-repeat: repeat;
-
-                @media screen and (max-width: $small) {
-                    height: 3px;
-                }
             }
 
             &:hover::before {
@@ -265,10 +261,6 @@ $small: 554px;
                             background-image: linear-gradient(70deg,#083df9 20%,#d18a48 60%,#ee06f2);
                             background-size: 100%;
                             background-repeat: repeat;
-
-                            @media screen and (max-width: $small) {
-                                height: 3px;
-                            }
                         }
 
                         &:hover {
