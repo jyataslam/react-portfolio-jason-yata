@@ -68,9 +68,14 @@ $small: 554px;
                 background-color: #CA4246;
                 // background-image: linear-gradient(70deg, #9b51f0 30%, #be1555 60%, #d90d22 100%);
                 // background-image: linear-gradient(70deg, #4100f5 20%, #828c7f 70%, #f51414 100%);
-                background-image: linear-gradient(70deg, #cb6318 20%, #403df9 70%, #f98e46 100%);
+                // background-image: linear-gradient(70deg, #cb6318 20%, #403df9 70%, #f98e46 100%);
+                background-image: linear-gradient(70deg,#083df9 20%,#d18a48 60%,#ee06f2);
                 background-size: 100%;
                 background-repeat: repeat;
+
+                @media screen and (max-width: $small) {
+                    height: 3px;
+                }
             }
 
             &:hover::before {
@@ -256,9 +261,14 @@ $small: 554px;
                             height: 2px;
                             background-color: #CA4246;
                             // background-image: linear-gradient(70deg, #9b51f0 30%, #be1555 60%, #d90d22 100%);
-                            background-image: linear-gradient(70deg, #9b00f5 20%, #828c7f 70%, #f51414 100%);
+                            // background-image: linear-gradient(70deg, #9b00f5 20%, #828c7f 70%, #f51414 100%);
+                            background-image: linear-gradient(70deg,#083df9 20%,#d18a48 60%,#ee06f2);
                             background-size: 100%;
                             background-repeat: repeat;
+
+                            @media screen and (max-width: $small) {
+                                height: 3px;
+                            }
                         }
 
                         &:hover {
