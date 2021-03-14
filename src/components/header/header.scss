@@ -75,7 +75,7 @@ $small: 554px;
 
     .sidenav {
         opacity: 0;
-        padding: 0 1rem;
+        padding: 1rem 1rem;
         background: white;
         color: #333;
         position: fixed;
@@ -84,7 +84,7 @@ $small: 554px;
         top: 0;
         left: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         flex-direction: column;
         z-index: -10;
         overflow-y: scroll;
@@ -102,14 +102,16 @@ $small: 554px;
             text-decoration: none;
             outline: none;
             color: #333;
-            position: relative;
-            bottom: 2rem;
             text-transform: uppercase;
         }
 
+        .sidenav-links-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
         .sidenav-logo {
-            position: absolute;
-            top: 1rem;
 
             img {
                 max-width: 100%;
@@ -122,19 +124,14 @@ $small: 554px;
         }
 
         .icon-container {
-            position: absolute;
-            bottom: 2rem;
 
             i {
                 fill: #222;
-                font-size: 2rem;
+                font-size: 1.4rem;
                 color: #222;
                 transition: all .2s ease-in-out;
             }
-    
-            &:hover a {
-                color: #c7c7c7;
-            }
+
             a {
                 padding-left: 0;
     
@@ -150,10 +147,6 @@ $small: 554px;
                 &:hover {
                     color: #333;
                 }
-            }
-    
-            @media screen and (max-width: $small) {
-                padding-top: 5px;
             }
         }
     }
