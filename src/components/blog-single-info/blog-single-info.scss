@@ -8,6 +8,8 @@ $small: 554px;
     padding: 0 1.5vw 1.5vw;
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
+    margin: auto;
 
     @media screen and (max-width: $small) {
         padding: 2rem 3.2vw 3rem;
@@ -90,7 +92,7 @@ $small: 554px;
                         font-family: 'Cinzel', serif;
                         margin-top: 0;
                         font-size: 4rem;
-                        line-height: 4rem;
+                        line-height: 3.7rem;
                         margin-bottom: 0;
                         letter-spacing: 0;
                         color: white;
@@ -102,7 +104,7 @@ $small: 554px;
                 
                         @media screen and (max-width: $small) {
                             font-size: 2rem;
-                            line-height: 2.2rem;
+                            line-height: 2rem;
                         }
                     }
     
@@ -166,6 +168,7 @@ $small: 554px;
                 position: relative;
                 top: .9em;
                 font-size: 2rem;
+                line-height: 2rem;
                 display: inline-block;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -190,8 +193,25 @@ $small: 554px;
                 background-repeat: repeat;
 
                 @media screen and (max-width: $small) {
-                    line-height: 1.9rem;
+                    line-height: 1.8rem;
                     font-size: 1.8rem;
+                }
+            }
+
+            ul {
+                padding-top: 12px;
+
+                li {
+                    font-family: 'Roboto', sans-serif;
+                    margin-bottom: 10px;
+
+                    &::marker {
+                        color: rgba(255, 255, 255, 0.578);
+                    }
+    
+                    a {
+                        font-size: 18px;
+                    }
                 }
             }
 
@@ -261,8 +281,8 @@ $small: 554px;
                     }
 
                     @media screen and (max-width: $small) {
-                        font-size: 1.4rem;
-                        line-height: 2rem;
+                        font-size: 1.8rem;
+                        line-height: 1.8rem;
                     }
                 }
             }
@@ -318,6 +338,7 @@ $small: 554px;
                 position: relative;
                 padding-bottom: 2px;
                 font-weight: 500;
+                font-style: italic;
 
                 &:before {
                     content: '';
@@ -325,7 +346,7 @@ $small: 554px;
                     bottom: 0;
                     width: 100%;
                     height: 3px;
-                    background-color: #1c19ca;
+                    // background-color: #1c19ca;
                     // background-image: linear-gradient(
                     //         45deg,
                     //         #CA4246 16.666%, 
@@ -335,6 +356,7 @@ $small: 554px;
                     //         #51648f 66.666%, 
                     //         #A7489B 83.333%);
                     // background-image: linear-gradient(70deg,#083df9 20%,#ac7f54 60%,#ee06f2);
+                    background-image: linear-gradient(70deg,#083df9 35%,#ac7f54 70%,#ee06f2);
                     background-size: 100%;
                     background-repeat: repeat;
                 }

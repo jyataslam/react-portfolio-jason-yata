@@ -18,9 +18,12 @@ $small: 554px;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        transform: scale(1);
+        transition: all .3s ease-out;
 
         &:hover {
             cursor: pointer;
+            transform: scale(1.04);
         }
 
         @media screen and (max-width: $small) {
@@ -57,13 +60,17 @@ $small: 554px;
         .title {
             align-self: flex-start;
             font-family: 'Cinzel', serif;
+            line-height: 2rem;
+            line-height: 2.60416667vw;
 
             @media screen and (min-width: $xlarge) {
                 font-size: 40px;
+                line-height: 40px;
             }
 
             @media screen and (max-width: $med) {
                 font-size: 1.7rem;
+                line-height: 1.7rem;
             }
         }
 

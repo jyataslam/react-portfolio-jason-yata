@@ -84,6 +84,13 @@ class Header extends React.Component {
                         onClick={this.sidebarClose}
                     ></i>
                     <NavLink
+                        className="link sidenav-logo"
+                        to="/"
+                        onClick={this.sidebarClose}
+                    >
+                        <img src={logo} alt="jason yata logo" />
+                    </NavLink>
+                    <NavLink
                         className="link"
                         activeClassName="active"
                         to="/work"
@@ -123,6 +130,32 @@ class Header extends React.Component {
                     >
                         Resumé
                     </NavLink>
+                    <div className="icon-container">
+                        <a href="https://open.spotify.com/show/3CLctEf29mQHmosLDDFSst?si=CaohK_0tR063v5MVqH4pjg">
+                            <i className="fa fa-spotify"></i>
+                        </a>
+                        <a
+                            href="https://github.com/jyataslam"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fa fa-github"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/jasonyata/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fa fa-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/jasonyata/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <i className="fa fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         );

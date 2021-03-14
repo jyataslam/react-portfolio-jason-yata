@@ -61,7 +61,7 @@ export default class BlogPage extends React.Component {
                     className="text-container column-50-text"
                     style={{ paddingTop: "0" }}
                 >
-                    <h1>Blog</h1>
+                    <h1 className="title">Blog</h1>
                     <h3>Latest Posts</h3>
                 </div>
                 <div className="blog-posts-container">

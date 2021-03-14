@@ -7,6 +7,8 @@ $small: 554px;
     padding: 0 1.5vw 1.5vw;
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
+    margin: auto;
 
     @media screen and (max-width: $small) {
         padding: 2rem 3.2vw 3rem;
