@@ -92,9 +92,9 @@ class PodcastPage extends React.Component {
                             <i className="fa fa-instagram"></i>
                         </a>
                     </div>
-                </div>
-                <div className="podcast-player-container">
-                    <div id="buzzsprout-large-player-1318378"></div>
+                    <div className="podcast-player-container">
+                        <div id="buzzsprout-large-player-1318378"></div>
+                    </div>
                 </div>
             </section>
         );
