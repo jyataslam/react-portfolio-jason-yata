@@ -27,13 +27,11 @@ export default class BlogPage extends React.Component {
                 content_type: "blog",
             })
             .then((entries) => {
-                console.log(entries);
                 this.setState({ posts: entries.items });
             });
     };
 
     render() {
-        console.log(this.state.posts.length);
         return (
             <section id="blog" className="blog site-width">
                 <Helmet>

@@ -1,6 +1,6 @@
 import React from "react";
-// import BLOG_DATA from "../../assets/data/blogs.data";
 import BlogSingleInfo from "../../components/blog-single-info/blog-single-info";
+import Loader from "../../components/loader/loader";
 import * as contentful from "contentful";
 
 export default class BlogPageSingle extends React.Component {
@@ -26,19 +26,17 @@ export default class BlogPageSingle extends React.Component {
             .then((entries) => {
                 entries.items.forEach((entry) => {
                     this.setState({ data: entry.fields });
-                    console.log(entry.fields);
                 });
             });
     };
 
     render() {
-        console.log("current blog single state", this.state.data);
         return (
             <div className="blog-single">
                 {this.state.data !== null ? (
                     <BlogSingleInfo info={this.state.data} />
                 ) : (
-                    ""
+                    <Loader />
                 )}
             </div>
         );

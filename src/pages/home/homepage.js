@@ -60,7 +60,6 @@ class HomePage extends React.Component {
                 content_type: "blog",
             })
             .then((entries) => {
-                console.log(entries);
                 this.setState({ posts: entries.items });
             });
     };
@@ -69,20 +68,20 @@ class HomePage extends React.Component {
         return (
             <main className="home">
                 <Helmet>
-                    <title>Jason Yata | Portfolio</title>
+                    <title>Jason Yata X Portfolio</title>
                     <meta
                         name="description"
-                        content="Portfolio Website for Jason Yata, Development & Design"
+                        content="Portfolio Website for Jason Yata"
                     />
                     <meta property="og:type" content="website" />
                     <meta property="og:url" content="https://jasonyata.com" />
                     <meta
                         property="og:title"
-                        content="Jason Yata | Portfolio"
+                        content="Jason Yata X Portfolio"
                     />
                     <meta
                         property="og:description"
-                        content="Portfolio Website for Jason Yata, Development & Design"
+                        content="Portfolio Website for Jason Yata"
                     />
                     <meta
                         property="og:image"
