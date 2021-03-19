@@ -1,35 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 import "./blogpage.scss";
+
+import { connect } from "react-redux";
+import { fetchPosts } from "../../redux/blog/blog.actions";
+
 import BlogCard from "../../components/blog-card/blog-card";
-// import BLOG_DATA from "../../assets/data/blogs.data";
 import Loader from "../../components/loader/loader";
 import { Helmet } from "react-helmet";
-import * as contentful from "contentful";
 
-export default class BlogPage extends React.Component {
-    state = {
-        posts: [],
-    };
-
+class BlogPage extends Component {
     componentDidMount() {
-        this.fetchBlogs();
+        this.props.fetchPosts();
     }
-
-    fetchBlogs = () => {
-        var client = contentful.createClient({
-            space: "we4cu65w8bh3",
-            accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
-        });
-
-        client
-            .getEntries({
-                order: "-sys.createdAt",
-                content_type: "blog",
-            })
-            .then((entries) => {
-                this.setState({ posts: entries.items });
-            });
-    };
 
     render() {
         return (
@@ -63,8 +45,8 @@ export default class BlogPage extends React.Component {
                     <h3>Latest Posts</h3>
                 </div>
                 <div className="blog-posts-container">
-                    {this.state.posts.length !== 0 ? (
-                        this.state.posts.map((item, index) => {
+                    {this.props.posts !== undefined ? (
+                        this.props.posts.map((item, index) => {
                             return <BlogCard key={index} {...item.fields} />;
                         })
                     ) : (
@@ -75,3 +57,9 @@ export default class BlogPage extends React.Component {
         );
     }
 }
+
+const mapStateToProps = ({ blog }) => ({
+    posts: blog.posts.items,
+});
+
+export default connect(mapStateToProps, { fetchPosts })(BlogPage);

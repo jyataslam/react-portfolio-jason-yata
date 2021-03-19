@@ -67,7 +67,6 @@ class HomePage extends React.Component {
     // };
 
     render() {
-        console.log("homepage props", this.props.posts);
         return (
             <main className="home">
                 <Helmet>
