@@ -3,6 +3,10 @@ import "./homepage.scss";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import * as contentful from "contentful";
+
+import { connect } from "react-redux";
+import { fetchPosts } from "../../redux/blog/blog.actions";
+
 import ProjectItemHome from "../../components/project-item-home/project-item-home";
 import Ocps from "../../assets/images/ocps/ocps-mockup-template-3.jpg";
 import PocketStatz from "../../assets/images/ps/pocketstatz-featuredimage.jpg";
@@ -14,7 +18,7 @@ import Loader from "../../components/loader/loader";
 class HomePage extends React.Component {
     state = {
         isLoaded: false,
-        posts: [],
+        // posts: [],
         projects: [
             {
                 title: "Orange County Plastic Surgery",
@@ -44,27 +48,29 @@ class HomePage extends React.Component {
     };
 
     componentDidMount() {
-        this.fetchBlogs();
+        // this.fetchBlogs();
+        this.props.fetchPosts();
     }
 
-    fetchBlogs = () => {
-        var client = contentful.createClient({
-            space: "we4cu65w8bh3",
-            accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
-        });
+    // fetchBlogs = () => {
+    //     var client = contentful.createClient({
+    //         space: "we4cu65w8bh3",
+    //         accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
+    //     });
 
-        client
-            .getEntries({
-                order: "-sys.createdAt",
-                limit: 3,
-                content_type: "blog",
-            })
-            .then((entries) => {
-                this.setState({ posts: entries.items });
-            });
-    };
+    //     client
+    //         .getEntries({
+    //             order: "-sys.createdAt",
+    //             limit: 3,
+    //             content_type: "blog",
+    //         })
+    //         .then((entries) => {
+    //             this.setState({ posts: entries.items });
+    //         });
+    // };
 
     render() {
+        console.log("homepage props", this.props.posts);
         return (
             <main className="home">
                 <Helmet>
@@ -106,19 +112,21 @@ class HomePage extends React.Component {
                         <Link to="/blog">view all</Link>
                     </div>
                     <div className="blog-posts-container">
-                        {this.state.posts.length !== 0 ? (
-                            this.state.posts.map((item, index) => {
-                                return (
-                                    <BlogCardHome
-                                        key={index}
-                                        {...item.fields}
-                                    />
-                                );
-                            })
+                        {this.props.posts !== undefined ? (
+                            this.props.posts
+                                .filter((items, index) => index < 3)
+                                .map((item, index) => {
+                                    return (
+                                        <BlogCardHome
+                                            key={index}
+                                            {...item.fields}
+                                        />
+                                    );
+                                })
                         ) : (
                             <Loader />
                         )}
-                        {this.state.posts.length !== 0 ? (
+                        {this.props.posts !== undefined ? (
                             <Link to="/blog">All Blogs</Link>
                         ) : (
                             ""
@@ -130,4 +138,8 @@ class HomePage extends React.Component {
     }
 }
 
-export default HomePage;
+const mapStateToProps = ({ blog }) => ({
+    posts: blog.posts.items,
+});
+
+export default connect(mapStateToProps, { fetchPosts })(HomePage);
