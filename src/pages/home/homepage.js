@@ -2,7 +2,6 @@ import React from "react";
 import "./homepage.scss";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import * as contentful from "contentful";
 
 import { connect } from "react-redux";
 import { fetchPosts } from "../../redux/blog/blog.actions";
@@ -18,7 +17,6 @@ import Loader from "../../components/loader/loader";
 class HomePage extends React.Component {
     state = {
         isLoaded: false,
-        // posts: [],
         projects: [
             {
                 title: "Orange County Plastic Surgery",
@@ -48,7 +46,6 @@ class HomePage extends React.Component {
     };
 
     componentDidMount() {
-        // this.fetchBlogs();
         this.props.fetchPosts();
     }
 
