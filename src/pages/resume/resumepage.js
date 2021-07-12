@@ -1,7 +1,6 @@
 import React from "react";
 import "./resumepage.scss";
-import resume from "../../assets/images/resume.jpg";
-import mobileResume from "../../assets/images/resume-portfolio-mobile.jpg";
+import resume from "../../assets/images/resume_2021-min.jpg";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Helmet } from "react-helmet";
 
@@ -49,19 +48,14 @@ const ResumePage = () => {
                     alt="Jason Yata's Resume 2021"
                     className="full-img"
                 />
-                <img
-                    src={mobileResume}
-                    alt="Jason Yata's Resume 2021"
-                    className="mobile-img"
-                />
                 <a
-                    href="https://drive.google.com/file/d/18LD3tnZteQNTme5OF5ZELs3Vo8qnEq8_/view"
+                    href="https://www.canva.com/design/DAD9NDq7G3Q/QoeCgJBHBQH03uOLyiSmDw/view?utm_content=DAD9NDq7G3Q&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
                     className="button"
                     target="_blank"
                     rel="noreferrer"
                     download
                 >
-                    Download PDF
+                    VIEW PDF
                 </a>
             </div>
         </SRLWrapper>

@@ -49,28 +49,11 @@ class HomePage extends React.Component {
         this.props.fetchPosts();
     }
 
-    // fetchBlogs = () => {
-    //     var client = contentful.createClient({
-    //         space: "we4cu65w8bh3",
-    //         accessToken: "maI3X-kEL26eP035VOPJk7oSurARPM74Wzx-RvojGZU",
-    //     });
-
-    //     client
-    //         .getEntries({
-    //             order: "-sys.createdAt",
-    //             limit: 3,
-    //             content_type: "blog",
-    //         })
-    //         .then((entries) => {
-    //             this.setState({ posts: entries.items });
-    //         });
-    // };
-
     render() {
         return (
             <main className="home">
                 <Helmet>
-                    <title>Jason Yata X Portfolio</title>
+                    <title>Portfolio | Jason Yata</title>
                     <meta
                         name="description"
                         content="Portfolio Website for Jason Yata"
@@ -79,7 +62,7 @@ class HomePage extends React.Component {
                     <meta property="og:url" content="https://jasonyata.com" />
                     <meta
                         property="og:title"
-                        content="Jason Yata X Portfolio"
+                        content="Portfolio | Jason Yata"
                     />
                     <meta
                         property="og:description"
